@@ -1,4 +1,108 @@
+$header-height: 74px;
+
+$logo-H-height: 74px;
+$logo-H-width: 90px;
+
+$header-opacity: 0.15;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: $header-height;
+  width: 100%;
+  text-align: left;
+  overflow: hidden;
+  background-color: transparentize(white, $header-opacity);
+  border-bottom: 1px solid lightgrey;
+}
+
+.route-container {
+  height: $logo-H-height;
+  width: calc(100% - #{$logo-H-width});
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    display: block;
+  }
+}
+
+.route {
+  padding: 8px 20px;
+  font-size: 16px;
+  color: black;
+
+  font-weight: 200;
+
+  &:hover,
+  &:focus {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.route-row {
+  height: 37px;
+  white-space: nowrap;
+}
+
 .route--active {
   font-weight: bold;
-  text-decoration: underline;
+  text-decoration: none;
+}
+
+.logo-H {
+  height: $logo-H-height;
+  width: $logo-H-width;
+  line-height: 70px;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Lovers Quarrel', cursive;
+  font-size: 70px;
+  text-decoration: none;
+}
+
+.logo-H__text {
+  display: block;
+  height: 54px;
+  width: 67px;
+}
+
+.logo-H,
+.route,
+.route-container {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.logo-H,
+.logo-H:active,
+.logo-H:focus,
+.logo-H:hover,
+.logo-H:visited {
+  background-color: white;
+  color: black;
+}
+
+.logo-H--active,
+.logo-H--active:active,
+.logo-H--active:focus,
+.logo-H--active:hover,
+.logo-H--active:visited {
+  background-color: black;
+  color: white;
+}
+
+.logo-H,
+.logo-H--active,
+.logo-H--active:active,
+.logo-H--active:focus,
+.logo-H--active:hover,
+.logo-H--active:visited,
+.logo-H:active,
+.logo-H:focus,
+.logo-H:hover,
+.logo-H:visited {
+  text-decoration: none;
+  outline: none;
 }
