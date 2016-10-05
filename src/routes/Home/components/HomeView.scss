@@ -1,3 +1,6 @@
+@import "../../../components/View/View.scss";
+
 .view--home {
   text-align: left;
+  @extend .view--normal;
 }

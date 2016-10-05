@@ -3,10 +3,10 @@ import React from 'react'
 import './WorkView.scss'
 
 export const WorkView = (props) => (
-  <div className='view--software row'>
-    <div className='view--software__tab col-xs-12 text-left'>
-      <h4 className='view--software__tab__header'>Web</h4>
-      <table className='view--software__tab__table table text-left'>
+  <div className='view--work row'>
+    <div className='view--work__tab twelve columns text-left'>
+      <h4 className='view--work__tab__header'>Web</h4>
+      <table className='view--work__tab__table table text-left'>
         <thead>
           <tr>
             <th>Name</th>
@@ -55,9 +55,9 @@ export const WorkView = (props) => (
         </tbody>
       </table>
     </div>
-    <div className='view--software__tab col-sm-6 col-xs-12 text-left'>
-      <h4 className='view--software__tab__header'>Mobile</h4>
-      <table className='view--software__tab__table table text-left'>
+    <div className='view--work__tab twelve columns text-left'>
+      <h4 className='view--work__tab__header'>Mobile</h4>
+      <table className='view--work__tab__table table text-left'>
         <thead>
           <tr>
             <th>Name</th>
@@ -99,9 +99,9 @@ export const WorkView = (props) => (
         </tbody>
       </table>
     </div>
-    <div className='view--software__tab col-sm-6 col-xs-12 text-left'>
-      <h4 className='view--software__tab__header'>Games</h4>
-      <table className='view--software__tab__table table text-left'>
+    <div className='view--work__tab twelve columns text-left'>
+      <h4 className='view--work__tab__header'>Games</h4>
+      <table className='view--work__tab__table table text-left'>
         <thead>
           <tr>
             <th>Name</th>
@@ -124,9 +124,9 @@ export const WorkView = (props) => (
         </tbody>
       </table>
     </div>
-    <div className='view--software__tab col-xs-12 text-left'>
-      <h4 className='view--software__tab__header'>Other</h4>
-      <table className='view--software__tab__table table text-left'>
+    <div className='view--work__tab twelve columns text-left'>
+      <h4 className='view--work__tab__header'>Other</h4>
+      <table className='view--work__tab__table table text-left'>
         <thead>
           <tr>
             <th>Name</th>
