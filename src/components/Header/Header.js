@@ -12,7 +12,10 @@ export const Header = () => (
         <IndexLink to='/' className='route' activeClassName='route--active'>
           Home
         </IndexLink>
-        <Link to='/counter' className='route' activeClassName='route--active'>
+        <Link to='/work' className='route' activeClassName='route--active'>
+          Work
+        </Link>
+        <Link to='/software' className='route' activeClassName='route--active'>
           Software
         </Link>
         <Link to='/counter' className='route' activeClassName='route--active'>

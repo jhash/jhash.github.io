@@ -1,9 +1,5 @@
 @import "../../components/Header/Header.scss";
 
-$core-viewport-side-padding: 20px;
-
 .core-layout__viewport {
   padding-top: $header-height;
-  padding-left: $core-viewport-side-padding;
-  padding-right: $core-viewport-side-padding;
 }
