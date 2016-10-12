@@ -1,9 +1,7 @@
-# Check it out: http://humanstxt.org/
-
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Jake Hash -- Head Honcho -- DangerHash
 
 # THANKS
 
-    <name>
+    Jake Hash
