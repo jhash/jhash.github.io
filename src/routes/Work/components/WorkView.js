@@ -115,7 +115,10 @@ export const WorkView = (props) => (
           </tr>
           <tr>
             <th>FlappyUniverse</th>
-            <td>Built during a 48 hour hackathon with the intention of teaching students about the lifecycle of a star</td>
+            <td>
+              Built during a 48 hour hackathon with the intention
+              of teaching students about the lifecycle of a star
+            </td>
           </tr>
           <tr>
             <th>Ducktales</th>

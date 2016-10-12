@@ -1,8 +1,8 @@
-import { FULL_NAME } from '../../global'
+import _ from 'lodash'
 
 import { DEFAULT_LANGUAGE_CODE, DISPLAY_NAME } from '../../global'
 
-import { resolveLocalization, resolveLocalizationBoundToLanguage } from '../../../helpers/localize'
+import { resolveLocalizationBoundToLanguage } from '../../../helpers/localize'
 
 const HEADER_TITLE_BEGINNING = {
   [DEFAULT_LANGUAGE_CODE]: 'Hi, my name is'

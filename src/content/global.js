@@ -2,15 +2,9 @@ import _ from 'lodash'
 
 import { LANGUAGE_CODES } from './language'
 
-import { resolveLocalization, resolveLocalizationBoundToLanguage } from '../helpers/localize'
+import { resolveLocalizationBoundToLanguage } from '../helpers/localize'
 
 export const DEFAULT_LANGUAGE_CODE = LANGUAGE_CODES.en.code
-
-const FIRST_NAME_VARIATIONS = {
-  [DEFAULT_LANGUAGE_CODE]: 'Jake',
-  [LANGUAGE_CODES.pt.code]: 'Jacó',
-  [LANGUAGE_CODES.es.code]: 'Jacobo'
-}
 
 export const FIRST_NAME = {
   [DEFAULT_LANGUAGE_CODE]: 'Jake',

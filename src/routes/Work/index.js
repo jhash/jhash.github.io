@@ -19,6 +19,6 @@ export default (store) => ({
       cb(null, WorkContainer)
 
     /* Webpack named bundle   */
-  }, 'work')
+    }, 'work')
   }
 })
