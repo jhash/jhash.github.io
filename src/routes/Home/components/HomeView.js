@@ -1,11 +1,13 @@
 import _ from 'lodash'
 
 import React from 'react'
+import { Link } from 'react-router'
 import './HomeView.scss'
 
 import { resolveLocalizationGet } from '../../../helpers/localize'
 
 import HOME_VIEW_CONTENT from '../../../content/views/Home/home'
+import { CURRENT_WORK } from '../../../content/views/Work/work'
 
 export class HomeView extends React.Component {
   static propTypes = {
@@ -75,7 +77,35 @@ export class HomeView extends React.Component {
           </h5>
         </div>
         <h4 className='row'>{resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.jobTitle')}</h4>
-        <h5 className='row'>{resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.currentWorkHeader')}</h5>
+        <div className='row'>
+          <h5>{resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.currentWorkHeader')}</h5>
+          <ul>
+            {_.map(CURRENT_WORK, (workContent) => {
+              return (
+                <li>
+                  {_.get(workContent, 'link')
+                    ? <Link to={_.get(workContent, 'link')}>
+                      <div className='view--home__current_work__li__text'>
+                        {[
+                          resolveLocalizationGet(workContent, 'title'),
+                          resolveLocalizationGet(workContent, 'shortDescription')
+                        ].join(' - ')}
+                      </div>
+                    </Link>
+                    : <a href={_.get(workContent, 'href')} target='_blank'>
+                      <div className='view--home__current_work__li__text'>
+                        {[
+                          resolveLocalizationGet(workContent, 'title'),
+                          resolveLocalizationGet(workContent, 'shortDescription')
+                        ].join(' - ')}
+                      </div>
+                    </a>
+                  }
+                </li>
+              )
+            })}
+          </ul>
+        </div>
         <form onSubmit={this._sendMessage}>
           <div className='row'>
             <div className='four columns font-size--5 view--home__lets-work-together__title'>

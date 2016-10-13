@@ -1,5 +1,6 @@
 @import 'typography';
 @import 'media';
+@import 'text';
 
 @import '../components/View/View';
 
@@ -77,3 +78,7 @@
     display: block;
   }
 };
+
+.view--home__current_work__li__text {
+  @extend .text--ellipse;
+}

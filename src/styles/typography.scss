@@ -24,3 +24,9 @@ $mdi-font-path: "~mdi/fonts" !default;
 .font-size--6 {
   font-size: 1.5rem;
 }
+
+.text-ellipse {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
