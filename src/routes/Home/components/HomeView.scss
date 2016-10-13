@@ -1,3 +1,4 @@
+@import 'typography';
 @import 'media';
 
 @import '../components/View/View';
@@ -19,13 +20,60 @@
   @extend %view--home__header__location;
 }
 
+.view--home__header__location__icon {
+  @extend .mdi;
+  @extend .mdi-map-marker;
+  margin-right: 1rem;
+}
+
+@include mobile-or-phablet {
+  .view--home__lets-work-together__title {
+    margin-bottom: 0.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid lightgrey;
+  }
+};
+
 .view--home__lets-work-together__input {
+  margin-top: 0.5rem;
   width: 100%;
 }
 
+.view--home__lets-work-together__textarea {
+  max-width: 100%;
+  min-width: 100%;
+}
+
 .view--home__lets-work-together__label {
+  margin-top: 1rem;
+}
+
+.view--home__lets-work-together__label--hidden {
+  visibility: hidden;
+}
+
+.view--home__lets-work-together__disclaimer {
   margin-left: 0.5rem;
   margin-top: 0.5rem;
   font-size: 1rem;
   font-weight: normal;
 }
+
+.view--home__lets-work-together__error {
+  margin-top: 1rem;
+  color: orange;
+}
+
+.view--home__lets-work-together__error--tablet {
+  display: none;
+}
+
+@include tablet {
+  .view--home__lets-work-together__error--mobile {
+    display: none;
+  }
+
+  .view--home__lets-work-together__error--tablet {
+    display: block;
+  }
+};
