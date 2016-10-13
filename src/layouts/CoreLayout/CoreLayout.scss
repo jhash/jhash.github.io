@@ -1,5 +1,40 @@
-@import "../../components/Header/Header.scss";
+@import '../../components/Header/Header';
+@import 'align';
+@import 'display';
+
+$footer-height: 4rem;
 
 .container.core-layout__viewport {
-  padding-top: $header-height;
+  margin-top: $header-height;
+  margin-bottom: $footer-height;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: $footer-height;
+  width: 100%;
+  z-index: 9999;
+  text-align: left;
+  overflow: hidden;
+  background-color: transparentize(white, $header-opacity);
+  border-top: 1px solid lightgrey;
+
+  @extend .display--inline-block;
+}
+
+.footer__link--social {
+  color: black;
+  margin-left: 2rem;
+}
+
+.footer__link--social__icon {
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  @extend .align--vertical--middle;
+  @extend .display--inline-block;
 }
