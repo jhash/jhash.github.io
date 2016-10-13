@@ -1,9 +1,9 @@
 $header-height: 7.2rem;
 
-$logo-H-height: 7.2rem;
-$logo-H-width: 90px;
+$logo-h-height: $header-height;
+$logo-h-width: 9rem;
 
-$header-opacity: 0.15;
+$header-opacity: .15;
 
 .header {
   position: fixed;
@@ -19,8 +19,8 @@ $header-opacity: 0.15;
 }
 
 .route-container {
-  height: $logo-H-height;
-  width: calc(100% - #{$logo-H-width});
+  height: $logo-h-height;
+  width: calc(100% - #{$logo-h-width});
   overflow: auto;
 
   &::-webkit-scrollbar {
@@ -29,81 +29,80 @@ $header-opacity: 0.15;
 }
 
 .route {
-  padding: 8px 20px;
-  font-size: 16px;
+  padding: 0.6rem 2rem;
+  font-size: 1.5rem;
   color: black;
 
   font-weight: 200;
+  text-decoration: none;
 
   &:hover,
   &:focus {
     color: black;
-    text-decoration: none;
   }
 }
 
 .route-row {
-  height: 37px;
+  height: 3.8rem;
   white-space: nowrap;
 }
 
 .route--active {
   font-weight: bold;
-  text-decoration: none;
 }
 
-.logo-H {
-  height: $logo-H-height;
-  width: $logo-H-width;
-  line-height: 70px;
-  padding: 10px;
+.logo-h {
+  height: $logo-h-height;
+  width: $logo-h-width;
+  line-height: 7.2rem;
+  padding: 1rem;
   text-align: center;
   font-family: 'Lovers Quarrel', cursive;
-  font-size: 70px;
+  font-size: 7.2rem;
   text-decoration: none;
 }
 
-.logo-H__text {
+.logo-h__text {
   display: block;
-  height: 54px;
-  width: 67px;
+  height: 6rem;
+  width: 6.5rem;
 }
 
-.logo-H,
+.logo-h,
 .route,
 .route-container {
   display: inline-block;
   vertical-align: top;
 }
 
-.logo-H,
-.logo-H:active,
-.logo-H:focus,
-.logo-H:hover,
-.logo-H:visited {
+.logo-h,
+.logo-h:active,
+.logo-h:focus,
+.logo-h:hover,
+.logo-h:visited {
   background-color: white;
   color: black;
 }
 
-.logo-H--active,
-.logo-H--active:active,
-.logo-H--active:focus,
-.logo-H--active:hover,
-.logo-H--active:visited {
+.logo-h--active,
+.logo-h--active:active,
+.logo-h--active:focus,
+.logo-h--active:hover,
+.logo-h--active:visited {
   background-color: black;
   color: white;
 }
 
-.logo-H,
-.logo-H--active,
-.logo-H--active:active,
-.logo-H--active:focus,
-.logo-H--active:hover,
-.logo-H--active:visited,
-.logo-H:active,
-.logo-H:focus,
-.logo-H:hover,
-.logo-H:visited {
+.logo-h,
+.logo-h--active,
+.logo-h--active:active,
+.logo-h--active:focus,
+.logo-h--active:hover,
+.logo-h--active:visited,
+.logo-h:active,
+.logo-h:focus,
+.logo-h:hover,
+.logo-h:visited {
   text-decoration: none;
   outline: none;
 }

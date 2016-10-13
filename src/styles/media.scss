@@ -1,0 +1,35 @@
+$phablet-min-width: 400px;
+$tablet-min-width: 550px;
+$desktop-min-width: 750px;
+$hd-min-width: 1000px;
+$ultra-hd-min-width: 1200px;
+
+@mixin phablet {
+  @media (min-width: #{$phablet-min-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-min-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-min-width}) {
+    @content;
+  }
+}
+
+@mixin hd {
+  @media (min-width: #{$hd-min-width}) {
+    @content;
+  }
+}
+
+@mixin ultra-hd {
+  @media (min-width: #{$ultra-hd-min-width}) {
+    @content;
+  }
+}

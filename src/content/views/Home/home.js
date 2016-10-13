@@ -1,23 +1,26 @@
-import _ from 'lodash'
-
-import { DEFAULT_LANGUAGE_CODE, DISPLAY_NAME } from '../../global'
-
-import { resolveLocalizationBoundToLanguage } from '../../../helpers/localize'
-
-const HEADER_TITLE_BEGINNING = {
-  [DEFAULT_LANGUAGE_CODE]: 'Hi, my name is'
-}
+import { DEFAULT_LANGUAGE_CODE, DISPLAY_NAME, CURRENT_LOCATION } from '../../global'
 
 const HOME_VIEW_CONTENT = {
   header: {
-    title: (languageCode) => {
-      return _.map([HEADER_TITLE_BEGINNING, DISPLAY_NAME], resolveLocalizationBoundToLanguage(languageCode)).join(' ')
+    name: DISPLAY_NAME,
+    location: CURRENT_LOCATION,
+    jobTitle: {
+      [DEFAULT_LANGUAGE_CODE]: 'Web and Mobile Developer / Designer / Software Engineer'
     },
-    subtitle: {
-      [DEFAULT_LANGUAGE_CODE]: 'I am currently seeking freelance / contract work'
+    currentWorkHeader: {
+      [DEFAULT_LANGUAGE_CODE]: 'Currently working on:'
     },
-    paragraph: {
-      [DEFAULT_LANGUAGE_CODE]: 'You should totally hire me'
+    workTogetherQuestion: {
+      [DEFAULT_LANGUAGE_CODE]: 'Interested in working together?'
+    },
+    workTogetherEmailPlaceholder: {
+      [DEFAULT_LANGUAGE_CODE]: 'your@email.please'
+    },
+    workTogetherEmailDisclaimer: {
+      [DEFAULT_LANGUAGE_CODE]: 'I will not start sending you cat videos unless you want me to.'
+    },
+    workTogetherMessagePlaceholder: {
+      [DEFAULT_LANGUAGE_CODE]: 'Your message to me...'
     }
   }
 }

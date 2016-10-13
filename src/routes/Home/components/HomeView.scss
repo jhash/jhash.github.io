@@ -1,6 +1,31 @@
-@import "../../../components/View/View.scss";
+@import 'media';
+
+@import '../components/View/View';
 
 .view--home {
+  @extend %view--normal;
   text-align: left;
-  @extend .view--normal;
+}
+
+@include desktop {
+  %view--home__header__location {
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 3rem;
+  }
+};
+
+.view--home__header__location {
+  @extend %view--home__header__location;
+}
+
+.view--home__lets-work-together__input {
+  width: 100%;
+}
+
+.view--home__lets-work-together__label {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: normal;
 }

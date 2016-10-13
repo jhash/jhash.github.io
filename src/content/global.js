@@ -30,3 +30,7 @@ export const FULL_NAME_WITH_MI = (languageCode) => {
 export const DISPLAY_NAME = (languageCode) => {
   return _.map([FIRST_NAME, LAST_NAME], resolveLocalizationBoundToLanguage(languageCode)).join(' ')
 }
+
+export const CURRENT_LOCATION = {
+  [DEFAULT_LANGUAGE_CODE]: 'Los Angeles, CA / Remote'
+}

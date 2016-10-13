@@ -1,14 +1,14 @@
-@import "../../../components/View/View.scss";
+@import '../components/View/View.scss';
 
 .view--work {
-    @extend .view--normal;
+  @extend %view--normal;
 }
 
 .view--work__tab {
 }
 
 .view--work__tab__header {
-  padding-bottom: 10px;
-  margin-bottom: 10px;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
   border-bottom: 1px solid black;
 }

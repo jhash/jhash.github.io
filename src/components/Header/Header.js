@@ -4,8 +4,8 @@ import './Header.scss'
 
 export const Header = () => (
   <div className='header'>
-    <IndexLink to='/' className='logo-H' activeClassName='logo-H--active'>
-      <span className='logo-H__text'>H</span>
+    <IndexLink to='/' className='logo-h' activeClassName='logo-h--active'>
+      <span className='logo-h__text'>H</span>
     </IndexLink>
     <div className='route-container'>
       <div className='route-row'>
