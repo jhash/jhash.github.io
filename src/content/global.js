@@ -2,7 +2,7 @@ import _ from 'lodash'
 
 import { LANGUAGE_CODES } from './language'
 
-import { resolveLocalizationBoundToLanguage } from '../helpers/localize'
+import { resolveLocalizationBoundToLanguage } from 'helpers/localize'
 
 export const DEFAULT_LANGUAGE_CODE = LANGUAGE_CODES.en.code
 

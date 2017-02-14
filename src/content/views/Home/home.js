@@ -1,4 +1,4 @@
-import { DEFAULT_LANGUAGE_CODE, DISPLAY_NAME, CURRENT_LOCATION } from '../../global'
+import { DEFAULT_LANGUAGE_CODE, DISPLAY_NAME, CURRENT_LOCATION } from 'content/global'
 
 const HOME_VIEW_CONTENT = {
   header: {

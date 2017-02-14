@@ -1,6 +1,6 @@
 import _ from 'lodash'
 
-import { DEFAULT_LANGUAGE_CODE } from '../content/global'
+import { DEFAULT_LANGUAGE_CODE } from 'content/global'
 
 const ERROR_LOCATION = '/helpers/localize.js:'
 

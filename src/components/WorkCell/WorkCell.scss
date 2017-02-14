@@ -1,0 +1,64 @@
+@import 'media';
+
+$work-cell-spillover: 0.75rem;
+
+.work-cell-link {
+  display: block;
+  padding-bottom: 1rem;
+  margin: 0 (-1 * $work-cell-spillover);
+  margin-bottom: 1.5rem;
+  padding: 0 $work-cell-spillover;
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid lightgray;
+  }
+}
+
+.work-cell {
+  color: black;
+  padding: 0 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.work-cell__row {
+  line-height: 3rem;
+  margin-bottom: 0.4rem;
+}
+
+.work-cell__row__side {
+
+}
+
+.work-cell__row--1 {
+  font-weight: bold;
+}
+
+.work-cell__row--1__left {
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.work-cell__row--1__right {
+  font-size: 2rem;
+}
+
+.work-cell__row--1__right,
+.work-cell__row--2__right {
+  @include tablet {
+    text-align: right;
+  }
+}
+
+.work-cell__row--2__left {
+  font-size: 1.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.work-cell__row--2__right {
+  font-size: 1.7rem;
+}
+
+.work-cell__row--3,
+.work-cell__row--4 {
+  font-size: 1.6rem;
+}

@@ -4,10 +4,10 @@ import React from 'react'
 import { Link } from 'react-router'
 import './HomeView.scss'
 
-import { resolveLocalizationGet } from '../../../helpers/localize'
+import { resolveLocalizationGet } from 'helpers/localize'
 
-import HOME_VIEW_CONTENT from '../../../content/views/Home/home'
-import { CURRENT_WORK } from '../../../content/views/Work/work'
+import HOME_VIEW_CONTENT from 'content/views/Home/home'
+import { CURRENT_WORK } from 'content/views/Work/work'
 
 export class HomeView extends React.Component {
   static propTypes = {

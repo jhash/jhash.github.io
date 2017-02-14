@@ -1,5 +1,11 @@
 @import '../components/View/View.scss';
 
+$view-work-tag-container-top-padding: 2rem;
+$view-work-tag-container-top-margin: 1rem;
+$view-work-tag-container-padding: 0.5rem;
+$view-work-tag-container-label-font-size: 1.2rem;
+
+
 .view--work {
   @extend %view--normal;
 }
@@ -10,5 +16,45 @@
 .view--work__tab__header {
   padding-bottom: 1rem;
   margin-bottom: 1rem;
+  border-bottom: 1px solid black;
+}
+
+.view--work__tab__table {
+  // max-width: 60rem;
+  // margin: 0 auto;
+  text-align: left;
+}
+
+.view--work__tag-container {
+  position: relative;
+  margin-top: $view-work-tag-container-top-margin;
+  padding: 0 $view-work-tag-container-padding;
+  padding-top: $view-work-tag-container-top-padding;
+}
+
+.view--work__tag-container__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: $view-work-tag-container-label-font-size;
+  font-size: $view-work-tag-container-label-font-size;
+  font-weight: bold;
+}
+
+.view--work__tag-wrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0.5rem 0;
+}
+
+.view--work__tag {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid black;
+}
+
+.view--work__tab__table__section-title {
+  padding-bottom: 1rem;
   border-bottom: 1px solid black;
 }
