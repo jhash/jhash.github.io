@@ -1,6 +1,10 @@
 $mdi-font-path: "~mdi/fonts" !default;
 @import '~mdi/scss/materialdesignicons';
 
+body {
+  font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
 .font-size--1 {
   font-size: 5rem;
 }

@@ -18,22 +18,22 @@ export const Header = () => (
         <Link to='/software' className='route' activeClassName='route--active'>
           Software
         </Link>
-        <Link to='/counter' className='route' activeClassName='route--active'>
+        <Link to='/photography' className='route' activeClassName='route--active'>
           Photography
         </Link>
-        <Link to='/counter' className='route' activeClassName='route--active'>
+        <Link to='/film' className='route' activeClassName='route--active'>
           Film
         </Link>
-        <Link to='/counter' className='route' activeClassName='route--active'>
+        <Link to='/design' className='route' activeClassName='route--active'>
           Design
         </Link>
-        <Link to='/counter' className='route' activeClassName='route--active'>
+        <Link to='/music' className='route' activeClassName='route--active'>
           Music
         </Link>
-        <Link to='/counter' className='route' activeClassName='route--active'>
+        <Link to='/me' className='route' activeClassName='route--active'>
           Me
         </Link>
-        <Link to='/counter' className='route' activeClassName='route--active'>
+        <Link to='/blog' className='route' activeClassName='route--active'>
           Blog
         </Link>
       </div>

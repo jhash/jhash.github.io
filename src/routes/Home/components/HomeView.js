@@ -80,29 +80,17 @@ export class HomeView extends React.Component {
         <div className='row'>
           <h5>{resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.currentWorkHeader')}</h5>
           <ul>
-            {_.map(CURRENT_WORK, (workContent) => {
-              return (
-                <li>
-                  {_.get(workContent, 'link')
-                    ? <Link to={_.get(workContent, 'link')}>
-                      <div className='view--home__current_work__li__text'>
-                        {[
-                          resolveLocalizationGet(workContent, 'title'),
-                          resolveLocalizationGet(workContent, 'shortDescription')
-                        ].join(' - ')}
-                      </div>
-                    </Link>
-                    : <a href={_.get(workContent, 'href')} target='_blank'>
-                      <div className='view--home__current_work__li__text'>
-                        {[
-                          resolveLocalizationGet(workContent, 'title'),
-                          resolveLocalizationGet(workContent, 'shortDescription')
-                        ].join(' - ')}
-                      </div>
-                    </a>
-                  }
-                </li>
-              )
+            {_.map(CURRENT_WORK, (workContent, index) => {
+              const textContent = <li className='view--home__current_work__li__text'>
+                {[
+                  resolveLocalizationGet(workContent, 'title'),
+                  resolveLocalizationGet(workContent, 'shortDescription')
+                ].join(' - ')}
+              </li>
+
+              return _.get(workContent, 'link')
+                ? <Link key={`current-work-${index}`} to={_.get(workContent, 'link')}>{textContent}</Link>
+                : <a key={`current-work-${index}`} href={_.get(workContent, 'href')} target='_blank'>{textContent}</a>
             })}
           </ul>
         </div>

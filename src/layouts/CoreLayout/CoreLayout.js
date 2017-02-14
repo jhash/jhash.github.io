@@ -1,7 +1,13 @@
+import _ from 'lodash'
+
 import React from 'react'
-import Header from '../../components/Header'
+
 import './CoreLayout.scss'
 import '../../styles/core.scss'
+
+import Header from '../../components/Header'
+
+import { SOCIAL_LINKS } from '../../content/me'
 
 export const CoreLayout = ({ children }) => (
   <div>
@@ -10,11 +16,13 @@ export const CoreLayout = ({ children }) => (
       {children}
     </div>
     <div className='footer'>
-      <a className='footer__link--social' href='facebook.com' target='_blank'><i className='footer__link--social__icon mdi mdi-facebook' /></a>
-      <a className='footer__link--social' href='twitter.com' target='_blank'><i className='footer__link--social__icon mdi mdi-twitter' /></a>
-      <a className='footer__link--social' href='linkedin.com' target='_blank'><i className='footer__link--social__icon mdi mdi-linkedin' /></a>
-      <a className='footer__link--social' href='stackoverflow.com' target='_blank'><i className='footer__link--social__icon mdi mdi-stackoverflow' /></a>
-      <a className='footer__link--social' href='github.com' target='_blank'><i className='footer__link--social__icon mdi mdi-github-circle' /></a>
+      {_.map(SOCIAL_LINKS, (link) => {
+        return (
+          <a className='footer__link--social' href={link.href} key={link.title} title={link.title} target='_blank'>
+            <i className={['footer__link--social__icon', link.iconClass].join(' ')} />
+          </a>
+        )
+      })}
     </div>
   </div>
 )

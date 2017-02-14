@@ -5,8 +5,8 @@
 $footer-height: 4rem;
 
 .container.core-layout__viewport {
-  margin-top: $header-height;
-  margin-bottom: $footer-height;
+  padding-top: $header-height;
+  padding-bottom: $footer-height;
 }
 
 .footer {
