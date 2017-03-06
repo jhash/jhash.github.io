@@ -16,7 +16,9 @@ export const WorkView = (props) => (
   <div className='view--work row'>
     <div className='view--work__tab twelve columns text-left'>
       <div className='view--work__tab__table'>
-        <h4 className='view--work__tab__table__section-title'>{resolveLocalizationGet(WORK_VIEW_CONTENT, 'employedWorkTitle')}</h4>
+        <h4 className='view--work__tab__table__section-title'>{
+            resolveLocalizationGet(WORK_VIEW_CONTENT, 'employedWorkTitle')
+        }</h4>
         <div>
           {ALL_EMPLOYED_WORK.map((workContent, index) => {
             const textContent = <WorkCell
@@ -77,7 +79,9 @@ export const WorkView = (props) => (
               </a>
           })}
         </div>
-        <h4 className='view--work__tab__table__section-title'>{resolveLocalizationGet(WORK_VIEW_CONTENT, 'personalWorkTitle')}</h4>
+        <h4 className='view--work__tab__table__section-title'>{
+            resolveLocalizationGet(WORK_VIEW_CONTENT, 'personalWorkTitle')
+        }</h4>
         <div>
           {ALL_PERSONAL_WORK.map((workContent, index) => {
             const textContent = <WorkCell

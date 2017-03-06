@@ -1,0 +1,118 @@
+$tabitha-editor-line-checkbox-width: 3rem;
+$tabitha-editor-line-select-width: 8rem;
+
+$tabitha-editor-line-line-height: 2.5rem;
+
+$tabitha-editor-font-size: 1.5rem;
+$tabitha-preview-font-size: 1.7rem;
+
+.tabitha-editor {
+  overflow: auto;
+  font-size: $tabitha-editor-font-size;
+}
+
+.tabitha-preview__line,
+.tabitha-preview__line--global,
+.tabitha-editor__line,
+.tabitha-editor__line--global {
+  padding: 0.3rem 0;
+
+  overflow: visible;
+  white-space: nowrap;
+}
+
+.tabitha-editor__line {
+  &:nth-of-type(2n + 1) {
+    background: transparentize(lightgray, 0.8);
+  }
+}
+
+.tabitha-preview__line--global,
+.tabitha-editor__line--global {
+  padding-bottom: 1rem;
+  margin: 1rem 0;
+  border-bottom: 1px solid transparentize(lightgray, 0.4);
+}
+
+.tabitha-editor__checkbox-wrapper {
+  display: inline-block;
+  margin: 0;
+}
+
+.tabitha-editor__checkbox {
+  width: $tabitha-editor-line-checkbox-width;
+}
+
+select.tabitha-editor__select {
+  width: $tabitha-editor-line-select-width;
+  height: $tabitha-editor-line-line-height;
+  line-height: $tabitha-editor-line-line-height;
+
+  background: none;
+}
+
+a.tabitha-editor__delete {
+  padding: 0.25rem 1.5rem;
+
+  color: red;
+  text-decoration: none;
+
+  &[disabled] {
+    color: lightgray;
+  }
+}
+
+input.tabitha-editor__text {
+  width: calc(100% - #{$tabitha-editor-line-checkbox-width + $tabitha-editor-line-select-width});
+  height: $tabitha-editor-line-line-height;
+  line-height: $tabitha-editor-line-line-height;
+  padding: 0 2rem;
+
+  font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier;
+
+  background: none;
+  border-radius: 0;
+
+  &,
+  &:focus,
+  &:active,
+  &:visited,
+  &:hover {
+    border: none;
+    outline: none;
+  }
+}
+
+.tabitha-preview {
+  font-size: $tabitha-editor-font-size;
+}
+
+input.tabitha-preview__line {
+  width: 100%;
+  height: $tabitha-editor-line-line-height;
+  line-height: $tabitha-editor-line-line-height;
+  padding: 0;
+
+  font-size: $tabitha-preview-font-size;
+  font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier;
+
+  background: none;
+  border-radius: 0;
+
+  &,
+  &:focus,
+  &:active,
+  &:visited,
+  &:hover {
+    border: none;
+    outline: none;
+  }
+}
+
+.tabitha-preview__line--global {
+
+}
+
+.tabitha-preview__line--chords {
+  font-weight: bold;
+}
