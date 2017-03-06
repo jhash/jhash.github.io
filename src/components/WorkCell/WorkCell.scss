@@ -4,9 +4,7 @@ $work-cell-spillover: 0.75rem;
 
 .work-cell-link {
   display: block;
-  padding-bottom: 1rem;
   margin: 0 (-1 * $work-cell-spillover);
-  margin-bottom: 1.5rem;
   padding: 0 $work-cell-spillover;
 
   &:not(:last-of-type) {
@@ -16,8 +14,7 @@ $work-cell-spillover: 0.75rem;
 
 .work-cell {
   color: black;
-  padding: 0 0.5rem;
-  padding-bottom: 1rem;
+  padding: 2rem 0.5rem;
 }
 
 .work-cell__row {

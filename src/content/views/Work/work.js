@@ -40,22 +40,22 @@ export const CURRENT_EMPLOYED_WORK = [
 ]
 
 export const ALL_EMPLOYED_WORK = CURRENT_EMPLOYED_WORK.concat([
-  {
-    title: 'Volley',
-    company: 'Propeller Labs',
-    tags: ['Web', 'React', 'GSAP', 'Animation'],
-    shortDescription: {
-      [DEFAULT_LANGUAGE_CODE]: 'Green-field landing page in React'
-    },
-    href: 'http://volley.com/',
-    location: ['Remote'],
-    dates: [
-      {
-        start: new Date('01/02/2016'),
-        end: new Date('01/03/2016')
-      }
-    ]
-  },
+  // {
+  //   title: 'Volley',
+  //   company: 'Propeller Labs',
+  //   tags: ['Web', 'React', 'GSAP', 'Animation'],
+  //   shortDescription: {
+  //     [DEFAULT_LANGUAGE_CODE]: 'Green-field landing page in React'
+  //   },
+  //   href: 'http://volley.com/',
+  //   location: ['Remote'],
+  //   dates: [
+  //     {
+  //       start: new Date('01/02/2016'),
+  //       end: new Date('01/03/2016')
+  //     }
+  //   ]
+  // },
   {
     title: 'Society6',
     company: 'Society6',

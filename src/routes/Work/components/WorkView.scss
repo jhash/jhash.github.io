@@ -51,10 +51,11 @@ $view-work-tag-container-label-font-size: 1.2rem;
   padding: 0.5rem;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
-  border: 1px solid black;
+  border: 1px solid transparentize(black, 0.4);
 }
 
 .view--work__tab__table__section-title {
   padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
   border-bottom: 1px solid black;
 }
