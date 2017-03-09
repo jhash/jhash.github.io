@@ -7,12 +7,13 @@ import React from 'react'
 import { resolveLocalization } from 'helpers/localize'
 import { DEFAULT_LANGUAGE_CODE } from 'content/global'
 
-const TABITHA_LINE_TYPE_TEXT = 'text'
+const TABITHA_LINE_TYPE_LYRICS = 'lyrics'
 const TABITHA_LINE_TYPE_CHORDS = 'chords'
-const TABITHA_LINE_TYPE_TITLE = 'title'
+const TABITHA_LINE_TYPE_SECTION_TITLE = 'section_title'
+const TABITHA_LINE_TYPE_BLANK_LINE = 'blank_line'
 
 const TABITHA_LINE_TYPES = {
-  [TABITHA_LINE_TYPE_TEXT]: {
+  [TABITHA_LINE_TYPE_LYRICS]: {
     name: {
       [DEFAULT_LANGUAGE_CODE]: 'Lyrics'
     }
@@ -22,9 +23,14 @@ const TABITHA_LINE_TYPES = {
       [DEFAULT_LANGUAGE_CODE]: 'Chords'
     }
   },
-  [TABITHA_LINE_TYPE_TITLE]: {
+  [TABITHA_LINE_TYPE_SECTION_TITLE]: {
     name: {
-      [DEFAULT_LANGUAGE_CODE]: 'Title'
+      [DEFAULT_LANGUAGE_CODE]: 'Section Title'
+    }
+  },
+  [TABITHA_LINE_TYPE_BLANK_LINE]: {
+    name: {
+      [DEFAULT_LANGUAGE_CODE]: 'Blank Line'
     }
   }
 }
@@ -41,14 +47,28 @@ const TABITHA_EDIT_BUTTON_TEXT = {
   [DEFAULT_LANGUAGE_CODE]: 'Edit'
 }
 
+const TABITHA_SAVE_BUTTON_TEXT = {
+  [DEFAULT_LANGUAGE_CODE]: 'Save'
+}
+
 const TABITHA_EMPTY_PLACEHOLDER = {
   [DEFAULT_LANGUAGE_CODE]: 'Insert lyrics, chords, or section titles here'
 }
 
 const DEFAULT_EMPTY_LINE = {
-  type: TABITHA_LINE_TYPE_TEXT,
+  type: TABITHA_LINE_TYPE_LYRICS,
   text: ''
 }
+
+const MUSICAL_BASE_NOTES = [
+  'C',
+  'D',
+  'E',
+  'F',
+  'G',
+  'A',
+  'B'
+]
 
 export class TabithaView extends React.Component {
   static propTypes = {}
@@ -67,6 +87,10 @@ export class TabithaView extends React.Component {
     this._onPreviewToggleGlobal = this._onPreviewToggleGlobal.bind(this)
     this._onTypeChangeGlobal = this._onTypeChangeGlobal.bind(this)
     this._onSelectChangeGlobal = this._onSelectChangeGlobal.bind(this)
+    this._onSaveGlobal = this._onSaveGlobal.bind(this)
+  }
+  _onSaveGlobal () {
+
   }
   _onDeleteGlobal () {
     const lines = this.state.lines.filter(line => !line.selected)
@@ -145,7 +169,7 @@ export class TabithaView extends React.Component {
 
       const pastedLines = event.clipboardData.getData('Text').split('\n')
         .map(lineText => ({
-          type: TABITHA_LINE_TYPE_TEXT,
+          type: this.guessLineType(lineText),
           text: lineText
         }))
       const lines = this.state.lines.concat()
@@ -155,6 +179,25 @@ export class TabithaView extends React.Component {
         lines
       })
     }
+  }
+  guessLineType (lineText) {
+    const trimmedLineText = lineText.trim()
+    if (!trimmedLineText.length) return TABITHA_LINE_TYPE_BLANK_LINE
+
+    const textSplitOnWhiteSpace = trimmedLineText.split(/\s+/)
+
+    if (textSplitOnWhiteSpace.filter(textChunk =>
+      this.stringIsInAllCaps(textChunk)
+    ).length === textSplitOnWhiteSpace.length) return TABITHA_LINE_TYPE_SECTION_TITLE
+
+    if (textSplitOnWhiteSpace.filter(textChunk =>
+      MUSICAL_BASE_NOTES.indexOf(textChunk[0]) !== -1
+    ).length === textSplitOnWhiteSpace.length) return TABITHA_LINE_TYPE_CHORDS
+
+    return TABITHA_LINE_TYPE_LYRICS
+  }
+  stringIsInAllCaps (string) {
+    return string === string.toUpperCase()
   }
   onTypeChangeGenerator (lineIndex) {
     return (event) => {
@@ -201,6 +244,13 @@ export class TabithaView extends React.Component {
                 onClick={this._onPreviewToggleGlobal}
               >
                 {resolveLocalization(TABITHA_EDIT_BUTTON_TEXT)}
+              </a>
+              <a
+                className='tabitha-preview__save'
+                href='javascript:void(0)'
+                onClick={this._onSaveGlobal}
+              >
+                {resolveLocalization(TABITHA_SAVE_BUTTON_TEXT)}
               </a>
             </div>
             {this.state.lines.map((line, lineIndex) => (
