@@ -12,28 +12,28 @@ export const Header = () => (
         <IndexLink to='/' className='route' activeClassName='route--active'>
           Home
         </IndexLink>
-        <Link to='work' className='route' activeClassName='route--active'>
+        <Link to='/work' className='route' activeClassName='route--active'>
           Work
         </Link>
-        <Link to='software' className='route' activeClassName='route--active'>
+        <Link to='/software' className='route' activeClassName='route--active'>
           Software
         </Link>
-        <Link to='photography' className='route' activeClassName='route--active'>
+        <Link to='/photography' className='route' activeClassName='route--active'>
           Photography
         </Link>
-        <Link to='film' className='route' activeClassName='route--active'>
+        <Link to='/film' className='route' activeClassName='route--active'>
           Film
         </Link>
-        <Link to='design' className='route' activeClassName='route--active'>
+        <Link to='/design' className='route' activeClassName='route--active'>
           Design
         </Link>
-        <Link to='music' className='route' activeClassName='route--active'>
+        <Link to='/music' className='route' activeClassName='route--active'>
           Music
         </Link>
-        <Link to='me' className='route' activeClassName='route--active'>
+        <Link to='/me' className='route' activeClassName='route--active'>
           Me
         </Link>
-        <Link to='blog' className='route' activeClassName='route--active'>
+        <Link to='/blog' className='route' activeClassName='route--active'>
           Blog
         </Link>
       </div>

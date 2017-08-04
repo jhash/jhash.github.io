@@ -21,10 +21,10 @@ $header-opacity: .15;
 .route-container {
   height: $logo-h-height;
   width: calc(100% - #{$logo-h-width});
-  overflow: auto;
+  overflow-x: auto;
 
   &::-webkit-scrollbar {
-    display: block;
+    display: none;
   }
 }
 

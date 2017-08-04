@@ -2,11 +2,16 @@
 @import 'media';
 @import 'text';
 
-@import '../components/View/View';
+@import '~components/View/View';
 
 .view--home {
   @extend %view--normal;
   text-align: left;
+}
+
+.view--home__header__name {
+  vertical-align: middle;
+  display: inline-block;
 }
 
 @include desktop {

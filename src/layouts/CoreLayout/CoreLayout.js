@@ -16,13 +16,15 @@ export const CoreLayout = ({ children }) => (
       {children}
     </div>
     <div className='footer'>
-      {_.map(SOCIAL_LINKS, (link) => {
-        return (
-          <a className='footer__link--social' href={link.href} key={link.title} title={link.title} target='_blank'>
-            <i className={['footer__link--social__icon', link.iconClass].join(' ')} />
-          </a>
-        )
-      })}
+      <div className='footer__link-container'>
+        {_.map(SOCIAL_LINKS, (link) => {
+          return (
+            <a className='footer__link--social' href={link.href} key={link.title} title={link.title} target='_blank'>
+              <i className={['footer__link--social__icon', link.iconClass].join(' ')} />
+            </a>
+          )
+        })}
+      </div>
     </div>
   </div>
 )

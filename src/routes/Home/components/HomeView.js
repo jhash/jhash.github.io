@@ -68,7 +68,7 @@ export class HomeView extends React.Component {
     return (
       <div className='view--home'>
         <div className='row'>
-          <h2 className='display--inline-block align--vertical--middle'>
+          <h2 className='view--home__header__name'>
             {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.name')}
           </h2>
           <h5 className='view--home__header__location'>

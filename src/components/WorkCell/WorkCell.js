@@ -19,7 +19,7 @@ export class WorkCell extends React.Component {
             {this.props.rowOneLeft}
           </div>
           <div className='six columns work-cell__row__side work-cell__row--1__right'>
-            {this.props.rowOneRight}
+            <span className='work-cell__row--1__right__text'>{this.props.rowOneRight}</span>
           </div>
         </div>
         <div className='row work-cell__row work-cell__row--2'>

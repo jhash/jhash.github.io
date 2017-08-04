@@ -1,4 +1,5 @@
 @import 'media';
+@import 'typography';
 
 $work-cell-spillover: 0.75rem;
 
@@ -19,24 +20,34 @@ $work-cell-spillover: 0.75rem;
 
 .work-cell__row {
   line-height: 3rem;
-  margin-bottom: 0.4rem;
 }
 
 .work-cell__row__side {
-
+  border-bottom: 1px dotted transparentize(gray, 0.9);
 }
 
 .work-cell__row--1 {
-  font-weight: bold;
+
 }
 
 .work-cell__row--1__left {
   font-size: 2.2rem;
-  margin-bottom: 0.8rem;
+  font-weight: 700;
 }
 
 .work-cell__row--1__right {
   font-size: 2rem;
+
+  .work-cell__row--1__right__text {
+    &:before {
+      margin-left: -2.2rem;
+      margin-right: 0.2rem;
+      line-height: 3rem;
+      font: normal normal normal 24px/1 "Material Design Icons";
+      font-size: 1.9rem;
+      content: mdi('map-marker');
+    }
+  }
 }
 
 .work-cell__row--1__right,
@@ -48,7 +59,6 @@ $work-cell-spillover: 0.75rem;
 
 .work-cell__row--2__left {
   font-size: 1.9rem;
-  margin-bottom: 0.4rem;
 }
 
 .work-cell__row--2__right {
