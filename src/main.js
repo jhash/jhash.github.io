@@ -33,7 +33,8 @@ let render = () => {
 // ========================================================
 if (__DEV__) {
   if (window.devToolsExtension) {
-    window.devToolsExtension.open()
+    // window.devToolsExtension.open()
+    // TODO: turn this back on if you find it useful
   }
 }
 
