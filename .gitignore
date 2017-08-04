@@ -5,11 +5,3 @@ node_modules
 
 dist
 coverage
-
-.idea/
-.elasticbeanstalk/
-
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml
