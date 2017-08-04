@@ -40,11 +40,11 @@ $work-cell-spillover: 0.75rem;
 
   .work-cell__row--1__right__text {
     &:before {
-      margin-left: -2.2rem;
-      margin-right: 0.2rem;
+      margin-left: -2rem;
+      margin-right: 0.4rem;
       line-height: 3rem;
       font: normal normal normal 24px/1 "Material Design Icons";
-      font-size: 1.9rem;
+      font-size: 1.6rem;
       content: mdi('map-marker');
     }
   }

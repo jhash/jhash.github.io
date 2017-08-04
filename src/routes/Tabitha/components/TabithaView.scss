@@ -70,7 +70,7 @@ input.tabitha-editor__text {
   width: calc(100% - #{$tabitha-editor-line-checkbox-width + $tabitha-editor-line-select-width});
   height: $tabitha-editor-line-line-height;
   line-height: $tabitha-editor-line-line-height;
-  padding: 0 2rem;
+  padding-left: 2rem;
 
   font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier;
 

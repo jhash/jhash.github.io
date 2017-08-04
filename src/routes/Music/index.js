@@ -1,6 +1,6 @@
 import MusicView from 'routes/Music/components/MusicView'
 
 export default (store) => ({
-  path : 'music',
+  path: 'music',
   component: MusicView
 })

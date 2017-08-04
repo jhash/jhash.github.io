@@ -7,6 +7,13 @@ import WorkRoute from 'routes/Work'
 import MusicRoute from 'routes/Music'
 import TabithaRoute from 'routes/Tabitha'
 
+import SoftwareRoute from 'routes/Software'
+import PhotographyRoute from 'routes/Photography'
+import FilmRoute from 'routes/Film'
+import DesignRoute from 'routes/Design'
+import MeRoute from 'routes/Me'
+import BlogRoute from 'routes/Blog'
+
 /*  Note: Instead of using JSX, we recommend using react-router
     PlainRoute objects to build route definitions.   */
 
@@ -17,7 +24,13 @@ export const createRoutes = (store) => ({
   childRoutes : [
     WorkRoute(store),
     MusicRoute(store),
-    TabithaRoute(store)
+    TabithaRoute(store),
+    SoftwareRoute(store),
+    PhotographyRoute(store),
+    FilmRoute(store),
+    DesignRoute(store),
+    MeRoute(store),
+    BlogRoute(store)
   ]
 })
 
