@@ -1,6 +1,6 @@
 import { DEFAULT_LANGUAGE_CODE } from 'content/global'
 
-export const CURRENT_EMPLOYED_WORK = [
+export const CURRENT_WORK_SOFTWARE = [
   {
     title: 'WorkHands',
     company: 'WorkHands',
@@ -10,20 +10,20 @@ export const CURRENT_EMPLOYED_WORK = [
     href: 'https://www.workhands.us/',
     favicon: '',
     location: ['San Francisco, CA', 'Remote'],
-    tags: ['Web', 'Mobile', 'Cordova', 'JS', 'Angular', 'HTML', 'CSS'],
+    tags: ['Web', 'Mobile', 'Cordova', 'JS', 'Angular', 'iOS', 'Android', 'HTML', 'CSS', 'Ruby on Rails'],
     dates: [
       {
-        start: new Date('01/10/2016')
+        start: new Date('06/01/2016')
       },
       {
-        start: new Date('01/05/2015'),
+        start: new Date('05/01/2015'),
         end: new Date('01/01/2016')
       }
     ]
   }
 ]
 
-export const ALL_EMPLOYED_WORK = CURRENT_EMPLOYED_WORK.concat([
+export const ALL_WORK_SOFTWARE = CURRENT_WORK_SOFTWARE.concat([
   {
     title: 'COSMOS',
     company: 'Niuera',
@@ -36,7 +36,8 @@ export const ALL_EMPLOYED_WORK = CURRENT_EMPLOYED_WORK.concat([
     tags: ['Web', 'JS', 'D3', 'Web', 'HTML', 'CSS', 'SVG'],
     dates: [
       {
-        start: new Date('01/10/2016')
+        start: new Date('09/26/2016'),
+        end: new Date('07/31/2017')
       }
     ]
   },
@@ -58,8 +59,8 @@ export const ALL_EMPLOYED_WORK = CURRENT_EMPLOYED_WORK.concat([
   // },
   {
     title: 'Society6',
-    company: 'Society6',
-    tags: ['Web', 'JS', 'React', 'PHP'],
+    company: 'Leaf Group',
+    tags: ['Web', 'JS', 'React', 'PHP', 'jQuery'],
     shortDescription: {
       [DEFAULT_LANGUAGE_CODE]: 'Product Page and the Artist Upload Studio'
     },
@@ -67,15 +68,15 @@ export const ALL_EMPLOYED_WORK = CURRENT_EMPLOYED_WORK.concat([
     location: ['Los Angeles, CA'],
     dates: [
       {
-        start: new Date('01/03/2016'),
-        end: new Date('01/09/2016')
+        start: new Date('02/24/2016'),
+        end: new Date('09/01/2016')
       }
     ]
   },
   {
     title: 'Copy.com',
     company: 'Barracuda Networks',
-    tags: ['Web', 'JS', 'Angular', 'Cordova', 'Ruby on Rails', 'Copy'],
+    tags: ['Web', 'JS', 'Backbone', 'Marionette'],
     shortDescription: {
       [DEFAULT_LANGUAGE_CODE]: 'Developed a new front-end for the site Copy.com using Backbone/Marionette JS'
     },
@@ -83,31 +84,32 @@ export const ALL_EMPLOYED_WORK = CURRENT_EMPLOYED_WORK.concat([
     location: ['Ann Arbor, MI'],
     dates: [
       {
-        start: new Date('01/04/2014'),
-        end: new Date('01/05/2015')
+        start: new Date('04/01/2014'),
+        end: new Date('05/01/2015')
       }
     ]
   },
   {
     title: 'ADMI',
     company: 'ADMI',
-    tags: ['Web', 'JS', 'ColdFusion'],
+    tags: ['Web', 'JS', 'ColdFusion', 'jQuery', 'Office 365'],
     shortDescription: {
-      [DEFAULT_LANGUAGE_CODE]: 'Helped implement Javascript and scaffolded new pages in ColdFusion'
+      [DEFAULT_LANGUAGE_CODE]:
+        'Helped implement Javascript, scaffolded new pages in ColdFusion, set up Office 365 mail server'
     },
     href: 'http://admiglobal.com/',
     location: ['Ann Arbor, MI'],
     dates: [
       {
-        start: new Date('01/02/2014'),
-        end: new Date('01/04/2014')
+        start: new Date('02/01/2014'),
+        end: new Date('04/01/2014')
       }
     ]
   },
   {
     title: 'Videolog',
     company: 'Videolog',
-    tags: ['Web', 'JS', 'CSS', 'PHP', 'HTML'],
+    tags: ['Web', 'JS', 'CSS', 'PHP', 'HTML', 'jQuery'],
     shortDescription: {
       [DEFAULT_LANGUAGE_CODE]: 'Reorganized and centralized CSS, built UIs in JS and HTML/PHP'
     },
@@ -115,8 +117,8 @@ export const ALL_EMPLOYED_WORK = CURRENT_EMPLOYED_WORK.concat([
     location: ['Rio de Janeiro, Brazil'],
     dates: [
       {
-        start: new Date('01/05/2013'),
-        end: new Date('01/10/2013')
+        start: new Date('05/01/2013'),
+        end: new Date('10/01/2013')
       }
     ]
   }
@@ -129,7 +131,7 @@ export const CURRENT_PERSONAL_PROJECTS = [
     shortDescription: {
       [DEFAULT_LANGUAGE_CODE]: 'Personal Portfolio'
     },
-    href: 'http://jakehash.com',
+    href: '/',
     favicon: '',
     location: ['Remote'],
     tags: ['Web', 'JS', 'React', 'Redux', 'Node.js', 'HTML', 'CSS'],
@@ -141,20 +143,9 @@ export const CURRENT_PERSONAL_PROJECTS = [
   }
 ]
 
-export const PREVIOUS_PERSONAL_WORK = [
-
-]
-
-export const ALL_PERSONAL_WORK = CURRENT_PERSONAL_PROJECTS.concat(PREVIOUS_PERSONAL_WORK)
-
-export const CURRENT_WORK = CURRENT_EMPLOYED_WORK.concat(CURRENT_PERSONAL_PROJECTS)
-
 export const WORK_VIEW_CONTENT = {
-  employedWorkTitle: {
-    [DEFAULT_LANGUAGE_CODE]: 'Work Projects'
-  },
-  personalWorkTitle: {
-    [DEFAULT_LANGUAGE_CODE]: 'Personal Projects'
+  softwareWorkTitle: {
+    [DEFAULT_LANGUAGE_CODE]: 'Software'
   }
 }
 

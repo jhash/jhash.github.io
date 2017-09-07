@@ -10,7 +10,7 @@ import LoadingSpinnerFlower from 'components/LoadingSpinnerFlower/LoadingSpinner
 import EllipseDotAnimation from 'components/EllipseDotAnimation'
 
 import HOME_VIEW_CONTENT from 'content/views/Home/home'
-import { CURRENT_WORK } from 'content/views/Work/work'
+import { CURRENT_WORK_SOFTWARE } from 'content/views/Work/work'
 
 export class HomeView extends React.Component {
   static propTypes = {
@@ -133,7 +133,7 @@ export class HomeView extends React.Component {
         <div className='row'>
           <h5>{resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.currentWorkHeader')}</h5>
           <ul>
-            {_.map(CURRENT_WORK, (workContent, index) => {
+            {_.map(CURRENT_WORK_SOFTWARE, (workContent, index) => {
               const textContent = <li className='view--home__current_work__li__text'>
                 {[
                   resolveLocalizationGet(workContent, 'title'),

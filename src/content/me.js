@@ -113,10 +113,15 @@ export const SOCIAL_LINKS = [
     iconClass: INSTAGRAM_ICON_CLASS
   },
   {
-    title: TUMBLR_TITLE,
-    href: TUMBLR_URL,
-    iconClass: TUMBLR_ICON_CLASS
+    title: YOUTUBE_TITLE,
+    href: YOUTUBE_URL,
+    iconClass: YOUTUBE_ICON_CLASS
   },
+  // {
+  //   title: TUMBLR_TITLE,
+  //   href: TUMBLR_URL,
+  //   iconClass: TUMBLR_ICON_CLASS
+  // },
   {
     title: SPOTIFY_TITLE,
     href: SPOTIFY_URL,
@@ -126,45 +131,40 @@ export const SOCIAL_LINKS = [
     title: SOUNDCLOUD_TITLE,
     href: SOUNDCLOUD_URL,
     iconClass: SOUNDCLOUD_ICON_CLASS
-  },
-  {
-    title: STEAM_TITLE,
-    href: STEAM_URL,
-    iconClass: STEAM_ICON_CLASS
-  },
-  {
-    title: FACEBOOK_TITLE,
-    href: FACEBOOK_URL,
-    iconClass: FACEBOOK_ICON_CLASS
-  },
-  {
-    title: TWITTER_TITLE,
-    href: TWITTER_URL,
-    iconClass: TWITTER_ICON_CLASS
-  },
-  {
-    title: GOOGLEPLUS_TITLE,
-    href: GOOGLEPLUS_URL,
-    iconClass: GOOGLEPLUS_ICON_CLASS
-  },
-  {
-    title: STACKOVERFLOW_TITLE,
-    href: STACKOVERFLOW_URL,
-    iconClass: STACKOVERFLOW_ICON_CLASS
-  },
-  {
-    title: YOUTUBE_TITLE,
-    href: YOUTUBE_URL,
-    iconClass: YOUTUBE_ICON_CLASS
-  },
-  {
-    title: VIMEO_TITLE,
-    href: VIMEO_URL,
-    iconClass: VIMEO_ICON_CLASS
-  },
-  {
-    title: BEHANCE_TITLE,
-    href: BEHANCE_URL,
-    iconClass: BEHANCE_ICON_CLASS
   }
+  // {
+  //   title: STEAM_TITLE,
+  //   href: STEAM_URL,
+  //   iconClass: STEAM_ICON_CLASS
+  // },
+  // {
+  //   title: FACEBOOK_TITLE,
+  //   href: FACEBOOK_URL,
+  //   iconClass: FACEBOOK_ICON_CLASS
+  // },
+  // {
+  //   title: TWITTER_TITLE,
+  //   href: TWITTER_URL,
+  //   iconClass: TWITTER_ICON_CLASS
+  // },
+  // {
+  //   title: GOOGLEPLUS_TITLE,
+  //   href: GOOGLEPLUS_URL,
+  //   iconClass: GOOGLEPLUS_ICON_CLASS
+  // },
+  // {
+  //   title: STACKOVERFLOW_TITLE,
+  //   href: STACKOVERFLOW_URL,
+  //   iconClass: STACKOVERFLOW_ICON_CLASS
+  // },
+  // {
+  //   title: VIMEO_TITLE,
+  //   href: VIMEO_URL,
+  //   iconClass: VIMEO_ICON_CLASS
+  // },
+  // {
+  //   title: BEHANCE_TITLE,
+  //   href: BEHANCE_URL,
+  //   iconClass: BEHANCE_ICON_CLASS
+  // }
 ]

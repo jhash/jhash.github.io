@@ -1,9 +1,7 @@
 @import '~components/View/View.scss';
 
-$view-work-tag-container-top-padding: 1.3rem;
-$view-work-tag-container-top-margin: 0.5rem;
-$view-work-tag-container-label-font-size: 1.2rem;
-
+$view-work-tag-font-size: 1.2rem;
+$view-work-tag-line-height: 2.2rem;
 
 .view--work {
   @extend %view--normal;
@@ -24,41 +22,22 @@ $view-work-tag-container-label-font-size: 1.2rem;
   text-align: left;
 }
 
-.view--work__tag-container {
-  position: relative;
-  margin-top: $view-work-tag-container-top-margin;
-  padding-top: $view-work-tag-container-top-padding;
-}
+.view--work__description {
 
-.view--work__tag-container__label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  line-height: $view-work-tag-container-label-font-size;
-  font-size: $view-work-tag-container-label-font-size;
-  font-weight: bold;
 }
 
 .view--work__tag-wrapper {
-  overflow-x: auto;
-  white-space: nowrap;
   padding: 0.5rem 0;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 .view--work__tag {
-  padding: 0.5rem;
+  display: inline-block;
+  padding: 0 0.5rem;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   border: 1px dotted transparentize(black, 0.7);
-  font-size: 1.3rem;
-
-  &:first-of-type {
-    margin-left: 0.5rem;
-  }
+  font-size: $view-work-tag-font-size;
+  line-height: $view-work-tag-line-height;
 }
 
 .view--work__tab__table__section-title {
