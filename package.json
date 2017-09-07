@@ -8,7 +8,7 @@
     "npm": "^3.0.0"
   },
   "scripts": {
-    "docscopy": "cp -r dist docs",
+    "docscopy": "rimraf docs && cp -r dist docs && cp .CNAME docs/CNAME && ln -s docs/index.html docs/404.html",
     "clean": "rimraf dist",
     "compile": "better-npm-run compile",
     "lint": "eslint bin build config server src tests",
