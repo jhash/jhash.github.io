@@ -6,11 +6,11 @@ describe('(View) Home', () => {
   let _component
 
   beforeEach(() => {
-    _component = render(<HomeView />)
+    _component = render(<HomeView sendMessage={() => {}} />)
   })
 
-  it('Renders an h3', () => {
-    const welcome = _component.find('h3')
+  it('Renders the home view', () => {
+    const welcome = _component.find('.view--home')
     expect(welcome).to.exist
   })
 })

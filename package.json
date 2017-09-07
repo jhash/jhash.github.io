@@ -8,6 +8,7 @@
     "npm": "^3.0.0"
   },
   "scripts": {
+    "docscopy": "cp -r dist docs",
     "clean": "rimraf dist",
     "compile": "better-npm-run compile",
     "lint": "eslint bin build config server src tests",
@@ -36,7 +37,7 @@
       }
     },
     "deploy": {
-      "command": "npm run lint && npm run test && npm run clean && npm run compile",
+      "command": "npm run lint && npm run test && npm run clean && npm run compile && npm run docscopy",
       "env": {
         "DEBUG": "app:*"
       }
@@ -142,7 +143,7 @@
     "karma-webpack-with-fast-source-maps": "^1.10.1",
     "mocha": "^3.5.0",
     "nodemon": "^1.11.0",
-    "phantomjs-prebuilt": "^2.1.14",
+    "phantomjs-prebuilt": "^2.1.15",
     "react-addons-test-utils": "^15.6.0",
     "redbox-react": "^1.5.0",
     "sinon": "^1.17.7",
