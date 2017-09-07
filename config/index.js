@@ -82,7 +82,12 @@ config.globals = {
   '__PROD__'     : config.env === 'production',
   '__TEST__'     : config.env === 'test',
   '__COVERAGE__' : !argv.watch && config.env === 'test',
-  '__BASENAME__' : JSON.stringify(process.env.BASENAME || '')
+  '__BASENAME__' : JSON.stringify(process.env.BASENAME || ''),
+  'JAKE_HASH_API_BASE': JSON.stringify(process.env.JAKE_HASH_API_BASE || (
+    config.env === 'production'
+      ? 'http://ec2-18-221-68-241.us-east-2.compute.amazonaws.com/api'
+      : 'http://localhost:3001/api/'
+  ))
 }
 
 // ------------------------------------

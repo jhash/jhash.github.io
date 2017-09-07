@@ -5,7 +5,7 @@ const HOME_VIEW_CONTENT = {
     name: DISPLAY_NAME,
     location: CURRENT_LOCATION,
     jobTitle: {
-      [DEFAULT_LANGUAGE_CODE]: 'Web and Mobile Developer / Designer / Software Engineer'
+      [DEFAULT_LANGUAGE_CODE]: 'Web and Mobile Developer / Designer, Software Engineer'
     },
     currentWorkHeader: {
       [DEFAULT_LANGUAGE_CODE]: 'Currently working on:'
@@ -29,7 +29,7 @@ const HOME_VIEW_CONTENT = {
       [DEFAULT_LANGUAGE_CODE]: 'Your@email.please'
     },
     workTogetherEmailDisclaimer: {
-      [DEFAULT_LANGUAGE_CODE]: 'I will not start sending you cat videos unless you want me to.'
+      [DEFAULT_LANGUAGE_CODE]: 'I will not start sending you cat videos unless you want me to'
     },
     workTogetherNamePlaceholder: {
       [DEFAULT_LANGUAGE_CODE]: 'Your name'
@@ -45,6 +45,15 @@ const HOME_VIEW_CONTENT = {
     },
     workTogetherMessageError: {
       [DEFAULT_LANGUAGE_CODE]: 'Surely you have something to say. And don\'t call me Shirley'
+    },
+    workTogetherMessageSendError: {
+      [DEFAULT_LANGUAGE_CODE]: 'Failed to send message. Please try easing up on the sass'
+    },
+    workTogetherMessageSending: {
+      [DEFAULT_LANGUAGE_CODE]: 'Message sending'
+    },
+    workTogetherMessageSent: {
+      [DEFAULT_LANGUAGE_CODE]: 'Message sent successfully. Expect to hear from me or my butler soon'
     }
   }
 }

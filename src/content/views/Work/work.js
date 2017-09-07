@@ -2,31 +2,15 @@ import { DEFAULT_LANGUAGE_CODE } from 'content/global'
 
 export const CURRENT_EMPLOYED_WORK = [
   {
-    title: 'COSMOS',
-    company: 'Niuera',
-    shortDescription: {
-      [DEFAULT_LANGUAGE_CODE]: 'D3 Data Graphs'
-    },
-    href: 'http://niuera.co/',
-    favicon: '',
-    location: ['Remote'],
-    tags: ['Web', 'Javascript', 'JS', 'D3', 'Web', 'HTML', 'CSS', 'SVG'],
-    dates: [
-      {
-        start: new Date('01/10/2016')
-      }
-    ]
-  },
-  {
     title: 'WorkHands',
     company: 'WorkHands',
     shortDescription: {
-      [DEFAULT_LANGUAGE_CODE]: 'Deploying cordova application and building Angular components'
+      [DEFAULT_LANGUAGE_CODE]: '"LinkedIn for the Blue Collar World"'
     },
     href: 'https://www.workhands.us/',
     favicon: '',
     location: ['San Francisco, CA', 'Remote'],
-    tags: ['Web', 'Mobile', 'Cordova', 'Javascript', 'JS', 'Angular', 'HTML', 'CSS'],
+    tags: ['Web', 'Mobile', 'Cordova', 'JS', 'Angular', 'HTML', 'CSS'],
     dates: [
       {
         start: new Date('01/10/2016')
@@ -40,6 +24,22 @@ export const CURRENT_EMPLOYED_WORK = [
 ]
 
 export const ALL_EMPLOYED_WORK = CURRENT_EMPLOYED_WORK.concat([
+  {
+    title: 'COSMOS',
+    company: 'Niuera',
+    shortDescription: {
+      [DEFAULT_LANGUAGE_CODE]: 'D3 Data Graphs and React View Layer Code'
+    },
+    href: 'http://niuera.co/',
+    favicon: '',
+    location: ['Remote'],
+    tags: ['Web', 'JS', 'D3', 'Web', 'HTML', 'CSS', 'SVG'],
+    dates: [
+      {
+        start: new Date('01/10/2016')
+      }
+    ]
+  },
   // {
   //   title: 'Volley',
   //   company: 'Propeller Labs',
@@ -59,7 +59,7 @@ export const ALL_EMPLOYED_WORK = CURRENT_EMPLOYED_WORK.concat([
   {
     title: 'Society6',
     company: 'Society6',
-    tags: ['Web', 'React', 'PHP'],
+    tags: ['Web', 'JS', 'React', 'PHP'],
     shortDescription: {
       [DEFAULT_LANGUAGE_CODE]: 'Product Page and the Artist Upload Studio'
     },
@@ -75,7 +75,7 @@ export const ALL_EMPLOYED_WORK = CURRENT_EMPLOYED_WORK.concat([
   {
     title: 'Copy.com',
     company: 'Barracuda Networks',
-    tags: ['Web', 'Angular', 'Cordova', 'Ruby on Rails', 'Copy'],
+    tags: ['Web', 'JS', 'Angular', 'Cordova', 'Ruby on Rails', 'Copy'],
     shortDescription: {
       [DEFAULT_LANGUAGE_CODE]: 'Developed a new front-end for the site Copy.com using Backbone/Marionette JS'
     },
@@ -132,7 +132,7 @@ export const CURRENT_PERSONAL_PROJECTS = [
     href: 'http://jakehash.com',
     favicon: '',
     location: ['Remote'],
-    tags: ['Web', 'Javascript', 'JS', 'React', 'Redux', 'Node', 'Node.js', 'HTML', 'CSS'],
+    tags: ['Web', 'JS', 'React', 'Redux', 'Node.js', 'HTML', 'CSS'],
     dates: [
       {
         start: new Date('01/01/2015')

@@ -3,6 +3,7 @@
 @import 'text';
 
 @import '~components/View/View';
+@import '~components/LoadingSpinnerFlower/LoadingSpinnerFlower';
 
 .view--home {
   @extend %view--normal;
@@ -29,6 +30,16 @@
 .view--home__header__location__icon {
   @extend .mdi;
   @extend .mdi-map-marker;
+  margin-right: 1rem;
+}
+
+.view--home__message-sent {
+  margin-top: 2rem;
+}
+
+.view--home__message-sent__icon {
+  @extend .mdi;
+  @extend .mdi-check;
   margin-right: 1rem;
 }
 
@@ -93,4 +104,27 @@
 .view--home__current_work__li__text {
   @extend .text--ellipse;
   font-size: 1.7rem;
+}
+
+$home-loading-spinner-top-bottom-padding: 2rem;
+$home-loading-spinner-height-adjustment: 40px;
+$home-loading-text-size: 1.7rem;
+$home-loading-text-line-height: 3rem;
+.view--home__loading {
+  position: relative;
+  padding-top: calc(#{$home-loading-spinner-top-bottom-padding} + #{$loading-spinner-size} + #{$home-loading-spinner-height-adjustment});
+  padding-bottom: $home-loading-spinner-top-bottom-padding;
+}
+
+.view--home__loading__text {
+  text-align: center;
+  line-height: $home-loading-text-line-height;
+  font-size: $home-loading-text-size;
+}
+
+.view--home__loading__spinner-wrapper {
+  position: absolute;
+  left: 50%;
+  top: calc(#{$home-loading-spinner-top-bottom-padding} + #{$home-loading-spinner-height-adjustment});
+  transform: translate(-50%, -50%);
 }

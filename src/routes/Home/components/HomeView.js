@@ -6,6 +6,9 @@ import './HomeView.scss'
 
 import { resolveLocalizationGet } from 'helpers/localize'
 
+import LoadingSpinnerFlower from 'components/LoadingSpinnerFlower/LoadingSpinnerFlower'
+import EllipseDotAnimation from 'components/EllipseDotAnimation'
+
 import HOME_VIEW_CONTENT from 'content/views/Home/home'
 import { CURRENT_WORK } from 'content/views/Work/work'
 
@@ -18,36 +21,86 @@ export class HomeView extends React.Component {
     super(props)
 
     this.state = {
-      nameValid: true,
-      emailValid: true,
-      messageValid: true
+      name: '',
+      email: '',
+      message: ''
     }
 
     this._sendMessage = this._sendMessage.bind(this)
+    this._onNameChange = this._onNameChange.bind(this)
+    this._onEmailChange = this._onEmailChange.bind(this)
+    this._onMessageChange = this._onMessageChange.bind(this)
+  }
+
+  _onNameChange (event) {
+    this.onMessageFormChange()
+
+    this.setState({
+      name: event.target.value,
+      nameValid: this.validateName(event.target.value)
+    })
+  }
+  _onEmailChange (event) {
+    this.onMessageFormChange()
+
+    this.setState({
+      email: event.target.value,
+      emailValid: this.validateEmail(event.target.value)
+    })
+  }
+  _onMessageChange (event) {
+    this.onMessageFormChange()
+
+    this.setState({
+      message: event.target.value,
+      messageValid: this.validateMessage(event.target.value)
+    })
   }
 
   _sendMessage (e) {
     e.preventDefault()
 
-    const name = this.refs.letsWorkTogetherName.value.trim()
-    const email = this.refs.letsWorkTogetherEmail.value.trim()
-    const message = this.refs.letsWorkTogetherMessage.value.trim()
-
-    const nameValid = this.validateEmail(name)
-    const emailValid = this.validateName(email)
-    const messageValid = this.validateMessage(message)
+    const nameValid = this.validateName(this.state.name)
+    const emailValid = this.validateEmail(this.state.email)
+    const messageValid = this.validateMessage(this.state.message)
 
     this.setState({
       nameValid,
       emailValid,
-      messageValid
+      messageValid,
+      submitIntent: true
     })
 
     if (!nameValid || !emailValid || !messageValid) return
 
+    this.setState({
+      submitIntent: undefined,
+      messageSending: true,
+      loadingSpinnerHeight: this.refs.letsWorkTogetherForm.clientHeight
+    })
+
     this.props.sendMessage({
-      email,
-      message
+      name: this.state.name,
+      email: this.state.email,
+      message: this.state.message
+    }).then(() => {
+      this.setState({
+        messageSending: false,
+        messageSentSuccessfully: true,
+        loadingSpinnerHeight: undefined
+      })
+    }).catch(() => {
+      this.setState({
+        messageSending: false,
+        messageSentSuccessfully: false,
+        loadingSpinnerHeight: undefined
+      })
+    })
+  }
+
+  onMessageFormChange () {
+    this.setState({
+      messageSentSuccessfully: undefined
     })
   }
 
@@ -94,93 +147,123 @@ export class HomeView extends React.Component {
             })}
           </ul>
         </div>
-        <form onSubmit={this._sendMessage}>
-          <div className='row'>
-            <div className='four columns font-size--5 view--home__lets-work-together__title'>
-              {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherQuestion')}
-            </div>
-            <div className='four columns'>
-              <label htmlFor='lets-work-together-email' className='view--home__lets-work-together__label'>
-                {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherEmailLabel')}
-              </label>
-              <input
-                type='email'
-                className='view--home__lets-work-together__input'
-                ref='letsWorkTogetherEmail'
-                id='lets-work-together-email'
-                name='lets-work-together-email'
-                placeholder={resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherEmailPlaceholder')}
-              />
-              <div className='view--home__lets-work-together__disclaimer'>
-                {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherEmailDisclaimer')}
+        {!this.state.messageSending && this.state.messageSentSuccessfully !== true
+          ? <form onSubmit={this._sendMessage} ref='letsWorkTogetherForm'>
+            <div className='row'>
+              <div className='four columns font-size--5 view--home__lets-work-together__title'>
+                {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherQuestion')}
               </div>
-              {this.state.emailValid ? null
-                : <div className='view--home__lets-work-together__error'>
-                  {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherEmailError')}
+              <div className='four columns'>
+                <label htmlFor='lets-work-together-email' className='view--home__lets-work-together__label'>
+                  {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherEmailLabel')}
+                </label>
+                <input
+                  type='email'
+                  className='view--home__lets-work-together__input'
+                  ref='letsWorkTogetherEmail'
+                  id='lets-work-together-email'
+                  name='lets-work-together-email'
+                  placeholder={resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherEmailPlaceholder')}
+                  value={this.state.email}
+                  onChange={this._onEmailChange}
+                />
+                <div className='view--home__lets-work-together__disclaimer'>
+                  {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherEmailDisclaimer')}
                 </div>
-              }
-            </div>
+                {this.state.emailValid === false && this.state.submitIntent
+                  ? <div className='view--home__lets-work-together__error'>
+                    {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherEmailError')}
+                  </div>
+                : null}
+              </div>
 
-            <div className='four columns'>
-              <label htmlFor='lets-work-together-name' className='view--home__lets-work-together__label'>
-                {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherNameLabel')}
-              </label>
-              <input
-                type='text'
-                className='view--home__lets-work-together__input'
-                ref='letsWorkTogetherName'
-                id='lets-work-together-name'
-                name='lets-work-together-name'
-                placeholder={resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherNamePlaceholder')}
-              />
-              {this.state.nameValid ? null
-                : <div className='view--home__lets-work-together__error'>
-                  {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherNameError')}
-                </div>
-              }
+              <div className='four columns'>
+                <label htmlFor='lets-work-together-name' className='view--home__lets-work-together__label'>
+                  {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherNameLabel')}
+                </label>
+                <input
+                  type='text'
+                  className='view--home__lets-work-together__input'
+                  ref='letsWorkTogetherName'
+                  id='lets-work-together-name'
+                  name='lets-work-together-name'
+                  placeholder={resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherNamePlaceholder')}
+                  value={this.state.name}
+                  onChange={this._onNameChange}
+                />
+                {this.state.nameValid === false && this.state.submitIntent
+                  ? <div className='view--home__lets-work-together__error'>
+                    {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherNameError')}
+                  </div>
+                : null}
+              </div>
+            </div>
+            <div className='row view--home__lets-work-together__message-section'>
+              <div className='eight columns'>
+                <label htmlFor='lets-work-together-message' className='view--home__lets-work-together__label'>
+                  {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherMessageLabel')}
+                </label>
+                <textarea
+                  className='view--home__lets-work-together__input view--home__lets-work-together__textarea'
+                  ref='letsWorkTogetherMessage'
+                  id='lets-work-together-message'
+                  name='lets-work-together-message'
+                  placeholder={resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherMessagePlaceholder')}
+                  value={this.state.message}
+                  onChange={this._onMessageChange}
+                />
+                {this.state.messageValid === false && this.state.submitIntent
+                  ? <div className='view--home__lets-work-together__error view--home__lets-work-together__error--mobile'>
+                    {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherMessageError')}
+                  </div>
+                : null}
+                {this.state.messageSentSuccessfully === false
+                  ? <div className='view--home__lets-work-together__error'>
+                    {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherMessageSendError')}
+                  </div>
+                : null}
+              </div>
+              <div className='four columns'>
+                <label
+                  htmlFor='lets-work-together-send-button'
+                  className='view--home__lets-work-together__label view--home__lets-work-together__label--hidden'
+                >
+                  {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherSendLabel')}
+                </label>
+                <button
+                  className='view--home__lets-work-together__input view--home__lets-work-together__send-button'
+                  type='submit'
+                  id='lets-work-together-send-button'
+                  name='lets-work-together-send-button'
+                >
+                  {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherSendLabel')}
+                </button>
+                {this.state.messageValid === false && this.state.submitIntent
+                  ? <div className={'view--home__lets-work-together__error view--home__lets-work-together__error--tablet'}>
+                    {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherMessageError')}
+                  </div>
+                : null}
+              </div>
+            </div>
+          </form>
+        : null}
+        {this.state.messageSending
+          ? <div className='row view--home__loading' style={{ height: this.state.loadingSpinnerHeight }}>
+            <div className='view--home__loading__spinner-wrapper'>
+              <LoadingSpinnerFlower />
+            </div>
+            <div className='view--home__loading__text'>
+              {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherMessageSending')}
+              <EllipseDotAnimation />
             </div>
           </div>
-          <div className='row view--home__lets-work-together__message-section'>
-            <div className='eight columns'>
-              <label htmlFor='lets-work-together-message' className='view--home__lets-work-together__label'>
-                {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherMessageLabel')}
-              </label>
-              <textarea
-                className='view--home__lets-work-together__input view--home__lets-work-together__textarea'
-                ref='letsWorkTogetherMessage'
-                id='lets-work-together-message'
-                name='lets-work-together-message'
-                placeholder={resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherMessagePlaceholder')}
-              />
-              {this.state.messageValid ? null
-                : <div className='view--home__lets-work-together__error view--home__lets-work-together__error--mobile'>
-                  {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherMessageError')}
-                </div>
-              }
-            </div>
-            <div className='four columns'>
-              <label
-                htmlFor='lets-work-together-send-button'
-                className='view--home__lets-work-together__label view--home__lets-work-together__label--hidden'
-              >
-                {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherSendLabel')}
-              </label>
-              <button
-                className='view--home__lets-work-together__input view--home__lets-work-together__send-button'
-                type='submit'
-                id='lets-work-together-send-button'
-                name='lets-work-together-send-button'
-              >
-                Send
-              </button>
-              {this.state.messageValid ? null
-                : <div className='view--home__lets-work-together__error view--home__lets-work-together__error--tablet'>
-                  {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherMessageError')}
-                </div>
-              }
-            </div>
-          </div>
-        </form>
+        : null}
+        {this.state.messageSentSuccessfully === true
+          ? <h6 className='view--home__message-sent'>
+            <i className='view--home__message-sent__icon' />
+            {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherMessageSent')}
+          </h6>
+        : null}
       </div>
     )
   }

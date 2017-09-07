@@ -22,12 +22,14 @@ $work-cell-spillover: 0.75rem;
   line-height: 3rem;
 }
 
-.work-cell__row__side {
-  border-bottom: 1px dotted transparentize(gray, 0.9);
-}
+// .work-cell__row__side {
+//
+// }
 
 .work-cell__row--1 {
-
+  @include tablet {
+    border-bottom: 1px dotted transparentize(gray, 0.9);
+  }
 }
 
 .work-cell__row--1__left {
@@ -63,6 +65,10 @@ $work-cell-spillover: 0.75rem;
 
 .work-cell__row--2__right {
   font-size: 1.7rem;
+}
+
+.work-cell__row--3 {
+  margin: 0.5rem 0;
 }
 
 .work-cell__row--3,

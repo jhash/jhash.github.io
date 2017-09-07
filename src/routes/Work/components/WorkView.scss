@@ -55,6 +55,10 @@ $view-work-tag-container-label-font-size: 1.2rem;
   margin-bottom: 0.5rem;
   border: 1px dotted transparentize(black, 0.7);
   font-size: 1.3rem;
+
+  &:first-of-type {
+    margin-left: 0.5rem;
+  }
 }
 
 .view--work__tab__table__section-title {

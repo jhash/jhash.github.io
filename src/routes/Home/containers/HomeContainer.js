@@ -11,11 +11,16 @@ import HomeView from 'routes/Home/components/HomeView'
     Keys will be passed as props to presentational components. Here we are
     implementing our wrapper around increment; the component doesn't care   */
 
+import { apiPost } from 'helpers/api'
+import { ROUTE_MESSAGE_WORK_TOGETHER } from 'constants/api/routes'
+
 const mapDispatchToProps = () => {
   return {
     sendMessage: function (messageInfo) {
-      console.log(messageInfo.email)
-      console.log(messageInfo.message)
+      return apiPost(
+        ROUTE_MESSAGE_WORK_TOGETHER,
+        Object.assign({}, messageInfo)
+      )
     }
   }
 }

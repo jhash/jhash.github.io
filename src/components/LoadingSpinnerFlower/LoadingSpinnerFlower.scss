@@ -1,0 +1,56 @@
+// Courtesy of https://codepen.io/anon/pen/KvLxzv
+
+$loading-spinner-size: 50px;
+
+.loading-spinner--flower {
+	animation: loading-spinner-flower-rotate 1s linear infinite;
+	transform-origin: center;
+	display: block;
+	height: $loading-spinner-size;
+	width: $loading-spinner-size;
+}
+
+.loading-spinner--flower__span {
+	display: block;
+	border: 2px solid #222;
+	border-radius: 50%;
+	height: 100%;
+	width: 100%;
+
+	position: absolute;
+	left: 0;
+	top: 0;
+
+	&:nth-child(1) {
+		border-color: #222;
+	}
+	&:nth-child(2) {
+		left: -18px;
+		top: 10px;
+	}
+	&:nth-child(3) {
+		left: -18px;
+		top: -10px;
+	}
+	&:nth-child(4) {
+		left: 0;
+		top: -18px;
+	}
+	&:nth-child(5) {
+		left: 18px;
+		top: -10px;
+	}
+	&:nth-child(6) {
+		left: 18px;
+		top: 10px;
+	}
+	&:nth-child(7) {
+		left: 0;
+		top: 18px;
+	}
+}
+
+@keyframes loading-spinner-flower-rotate {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
