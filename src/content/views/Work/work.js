@@ -25,8 +25,8 @@ export const CURRENT_WORK_SOFTWARE = [
 
 export const ALL_WORK_SOFTWARE = CURRENT_WORK_SOFTWARE.concat([
   {
-    title: 'COSMOS',
-    company: 'Niuera',
+    title: 'COSMOS, Luzero',
+    company: 'Kimera Systems',
     shortDescription: {
       [DEFAULT_LANGUAGE_CODE]: 'D3 Data Graphs and React View Layer Code'
     },
