@@ -38,7 +38,7 @@ $work-cell-spillover: 0.75rem;
 }
 
 .work-cell__row--1__right {
-  font-size: 2rem;
+  font-size: 1.9rem;
 
   .work-cell__row--1__right__text {
     &:before {
@@ -60,7 +60,7 @@ $work-cell-spillover: 0.75rem;
 }
 
 .work-cell__row--2__left {
-  font-size: 1.9rem;
+  font-size: 1.8rem;
 }
 
 .work-cell__row--2__right {
@@ -68,10 +68,14 @@ $work-cell-spillover: 0.75rem;
 }
 
 .work-cell__row--3 {
-  margin: 0.5rem 0;
+  font-size: 1.6rem;
 }
 
 .work-cell__row--3,
 .work-cell__row--4 {
-  font-size: 1.6rem;
+  margin: 0.5rem 0;
+}
+
+.work-cell__row--4 {
+  font-size: 1.4rem;
 }

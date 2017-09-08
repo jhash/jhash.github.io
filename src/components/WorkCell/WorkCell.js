@@ -9,7 +9,8 @@ export class WorkCell extends React.Component {
     rowTwoLeft: React.PropTypes.node.isRequired,
     rowTwoRight: React.PropTypes.node.isRequired,
     rowThree: React.PropTypes.node.isRequired,
-    rowFour: React.PropTypes.node.isRequired
+    rowFour: React.PropTypes.node.isRequired,
+    rowFive: React.PropTypes.node.isRequired
   }
   render () {
     return (
@@ -38,6 +39,11 @@ export class WorkCell extends React.Component {
         <div className='row work-cell__row work-cell__row--4'>
           <div className='twelve columns'>
             {this.props.rowFour}
+          </div>
+        </div>
+        <div className='row work-cell__row work-cell__row--5'>
+          <div className='twelve columns'>
+            {this.props.rowFive}
           </div>
         </div>
       </div>

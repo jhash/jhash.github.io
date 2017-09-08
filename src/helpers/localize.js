@@ -10,7 +10,11 @@ export function resolveLocalizationGet (localizerContainer, localizerLocationStr
 
 export function resolveLocalization (localizer, languageCode = DEFAULT_LANGUAGE_CODE) {
   if (_.isString(localizer)) return localizer
-  if (_.isArray(localizer)) throw new Error(`${ERROR_LOCATION} arrays not supported`)
+  if (_.isArray(localizer)) {
+    return _.flatten(localizer.map((subLocalizer) =>
+      resolveLocalization(subLocalizer, languageCode)
+    ))
+  }
   if (_.isFunction(localizer)) {
     const finalLocalization = localizer(languageCode) || localizer(DEFAULT_LANGUAGE_CODE)
     if (_.isUndefined(finalLocalization)) throw new Error(`${ERROR_LOCATION} failed to localize`)

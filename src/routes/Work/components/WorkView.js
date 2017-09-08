@@ -48,10 +48,23 @@ export const WorkView = (props) => (
               })}
               rowThree={
                 <span className='view--work__description'>
-                  {resolveLocalizationGet(workContent, 'shortDescription')}
+                  {resolveLocalizationGet(workContent, 'projectNames')}
+                  {workContent.shortDescription
+                    ? ` - ${resolveLocalizationGet(workContent, 'shortDescription')}`
+                    : ''
+                  }
                 </span>
               }
               rowFour={
+                <span className='view--work__description'>
+                  <ul className='view--work__description__list'>
+                    {resolveLocalizationGet(workContent, 'workDescription').map((descriptionLine, key) =>
+                      <li key={key} className='view--work__description__list__item'>{descriptionLine}</li>
+                    )}
+                  </ul>
+                </span>
+              }
+              rowFive={
                 <div className='view--work__tag-wrapper'>
                   {_.map(workContent.tags, (tag, index) => (
                     <span className='view--work__tag' key={`view-work-tag-${index}`}>

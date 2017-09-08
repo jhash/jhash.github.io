@@ -136,7 +136,7 @@ export class HomeView extends React.Component {
             {_.map(CURRENT_WORK_SOFTWARE, (workContent, index) => {
               const textContent = <li className='view--home__current_work__li__text'>
                 {[
-                  resolveLocalizationGet(workContent, 'title'),
+                  resolveLocalizationGet(workContent, 'projectNames'),
                   resolveLocalizationGet(workContent, 'shortDescription')
                 ].join(' - ')}
               </li>

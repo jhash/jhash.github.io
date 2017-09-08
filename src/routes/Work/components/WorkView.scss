@@ -26,8 +26,23 @@ $view-work-tag-line-height: 2.2rem;
 
 }
 
+.view--work__description__list {
+  margin: 0.5rem 0;
+}
+
+.view--work__description__list__item {
+  list-style-type: disc;
+  list-style-position: inside;
+  text-indent: -2rem;
+  padding-left: 2.5rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
 .view--work__tag-wrapper {
-  padding: 0.5rem 0;
+  padding-top: 0.5rem;
 }
 
 .view--work__tag {
