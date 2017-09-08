@@ -101,6 +101,10 @@
   }
 };
 
+.view--home__current_work {
+  margin: 0;
+}
+
 .view--home__current_work__li__text {
   @extend .text--ellipse;
   font-size: 1.7rem;

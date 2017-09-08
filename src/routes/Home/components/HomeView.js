@@ -132,7 +132,7 @@ export class HomeView extends React.Component {
         <h4 className='row'>{resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.jobTitle')}</h4>
         <div className='row'>
           <h5>{resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.currentWorkHeader')}</h5>
-          <ul>
+          <ul className='view--home__current_work'>
             {_.map(CURRENT_WORK_SOFTWARE, (workContent, index) => {
               const textContent = <li className='view--home__current_work__li__text'>
                 {[
