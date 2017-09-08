@@ -10,7 +10,7 @@ import Header from 'components/Header/Header'
 import { SOCIAL_LINKS } from 'content/me'
 
 export const CoreLayout = ({ children }) => (
-  <div>
+  <div style={{ height: '100%' }}>
     <Header />
     <div className='container text-center core-layout__viewport'>
       {children}

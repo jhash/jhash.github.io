@@ -1,16 +1,23 @@
+@import 'media';
+
 @import '~components/Header/Header';
 
 $footer-height: 5;
 
 .container.core-layout__viewport {
+  @include mobile-height {
+    min-height: calc(100% - #{$footer-height}rem);
+  }
   padding-top: $header-height;
   padding-bottom: $footer-height + rem;
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  @include phablet-height {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
   height: $footer-height + rem;
   width: 100%;
   z-index: 9999;
