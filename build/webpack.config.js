@@ -2,6 +2,7 @@ const webpack = require('webpack')
 const cssnano = require('cssnano')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const config = require('../config')
 const debug = require('debug')('app:webpack:config')
 
@@ -185,6 +186,16 @@ if (!__DEV__) {
   webpackConfig.plugins.push(
     new ExtractTextPlugin('[name].[contenthash].css', {
       allChunks : true
+    })
+  )
+
+  webpackConfig.plugins.push(
+    new OptimizeCssAssetsPlugin({
+      cssProcessorOptions: {
+        discardComments: {
+          removeAll: true
+        }
+      }
     })
   )
 }

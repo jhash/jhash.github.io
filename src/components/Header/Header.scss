@@ -3,7 +3,7 @@ $header-height: 7.2rem;
 $logo-h-height: $header-height;
 $logo-h-width: 9rem;
 
-$header-opacity: .15;
+$header-transparency: .05;
 
 .header {
   position: fixed;
@@ -14,7 +14,7 @@ $header-opacity: .15;
   z-index: 10000;
   text-align: left;
   overflow: hidden;
-  background-color: transparentize(white, $header-opacity);
+  background-color: transparentize(white, $header-transparency);
   border-bottom: 1px solid lightgrey;
 }
 
