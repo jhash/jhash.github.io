@@ -42,6 +42,38 @@ export const CURRENT_WORK_SOFTWARE = [
         end: new Date('01/01/2016')
       }
     ]
+  },
+  {
+    title: 'Web Coordinator',
+    projectNames: 'AAoM',
+    company: 'Autism Alliance of Michigan',
+    shortDescription: {
+      [DEFAULT_LANGUAGE_CODE]: 'A non-profit focused on providing resources for families struggling with autism'
+    },
+    workDescription: {
+      [DEFAULT_LANGUAGE_CODE]: [
+        'Maintain and create content for various WordPress sites',
+        'Assist in the production of various print materials for marketing purposes'
+      ]
+    },
+    href: 'https://aaomi.org/',
+    favicon: '',
+    location: ['Southfield, MI', 'Remote'],
+    tags: [
+      'Web',
+      'WordPress',
+      'PHP',
+      'HTML',
+      'CSS',
+      'JS',
+      'Design',
+      'Adobe Suite'
+    ],
+    dates: [
+      {
+        start: new Date('11/07/2017')
+      }
+    ]
   }
 ]
 
