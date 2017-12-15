@@ -56,7 +56,7 @@ export const CURRENT_WORK_SOFTWARE = [
         'Assist in the production of various print materials for marketing purposes'
       ]
     },
-    href: 'https://aaomi.org/',
+    href: 'http://aaomi.org/',
     favicon: '',
     location: ['Southfield, MI', 'Remote'],
     tags: [
