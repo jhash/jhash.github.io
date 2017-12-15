@@ -1,0 +1,29 @@
+@import 'media';
+
+.view--photography {
+  padding-top: 7px;
+}
+
+@include tablet {
+  .view--photography__gallery__image-wrapper {
+    &.six.columns {
+      width: 49.5%;
+    }
+
+    &.column, &.columns {
+      margin-left: 1%;
+    }
+
+    &.column:first-child, &.columns:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.view--photography__gallery__image-wrapper {
+
+}
+
+.view--photography__gallery__image {
+  width: 100%;
+}

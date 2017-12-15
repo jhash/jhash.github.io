@@ -15,12 +15,12 @@ export const Header = () => (
         <Link to='/work' className='route' activeClassName='route--active'>
           Work
         </Link>
+        <Link to='/photography' className='route' activeClassName='route--active'>
+          Photography
+        </Link>
         {
         // <Link to='/software' className='route' activeClassName='route--active'>
         //   Software
-        // </Link>
-        // <Link to='/photography' className='route' activeClassName='route--active'>
-        //   Photography
         // </Link>
         // <Link to='/film' className='route' activeClassName='route--active'>
         //   Film
