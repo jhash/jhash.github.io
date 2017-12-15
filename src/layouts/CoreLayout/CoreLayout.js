@@ -12,7 +12,7 @@ import { SOCIAL_LINKS } from 'content/me'
 export const CoreLayout = ({ children }) => (
   <div style={{ height: '100%' }}>
     <Header />
-    <div className='container text-center core-layout__viewport'>
+    <div className='core-layout__viewport'>
       {children}
     </div>
     <div className='footer'>

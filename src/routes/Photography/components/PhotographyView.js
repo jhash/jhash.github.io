@@ -148,81 +148,33 @@ const HORSESHOE_BEND = {
   [IMAGE_WIDTH_LARGE]: HORSESHOE_BEND_2048
 }
 
+const CA_TO_MI_ROAD_TRIP_2017 = [
+  ANGELS_LANDING_RAILING,
+  // ARCHES_CANYON_SIDE_DIAGONAL,
+  ARCHES_DOUBLE_ARCH,
+  ZION_SUNSET_OVER_CLIFF,
+  // HORSESHOE_BEND,
+  CAPITOL_REEF_SUNSET_ROCK,
+  ARCHES_TREE_CAVE,
+  CAPITOL_REEF_BURNT_ROCK,
+  ZION_LONG_ROAD,
+  ARCHES_MONSTER_ARCH,
+  ZION_RIVER,
+  CANYONLANDS_FASHION_STATEMENT,
+  CANYONLANDS_HORIZON,
+  COLORADO_HIGHWAY_STOP_LAKE
+]
+
 export class PhotographyView extends React.Component {
   static propTypes = {}
   render () {
     return (
       <div className='view--photography'>
-        <div className='row view--photography__gallery__row'>
-          {_.map([
-            ANGELS_LANDING_RAILING,
-            COLORADO_HIGHWAY_STOP_LAKE
-          ], (image) => (
-            <div className='six columns view--photography__gallery__image-wrapper'>
-              <img className='view--photography__gallery__image' src={image[IMAGE_WIDTH_SMALL]} />
-            </div>
-          ))}
-        </div>
-        <div className='row view--photography__gallery__row'>
-          {_.map([
-            ARCHES_CANYON_SIDE_DIAGONAL,
-            ARCHES_DOUBLE_ARCH
-          ], (image) => (
-            <div className='six columns view--photography__gallery__image-wrapper'>
-              <img className='view--photography__gallery__image' src={image[IMAGE_WIDTH_SMALL]} />
-            </div>
-          ))}
-        </div>
-        <div className='row view--photography__gallery__row'>
-          {_.map([
-            ZION_SUNSET_OVER_CLIFF,
-            HORSESHOE_BEND
-          ], (image) => (
-            <div className='six columns view--photography__gallery__image-wrapper'>
-              <img className='view--photography__gallery__image' src={image[IMAGE_WIDTH_SMALL]} />
-            </div>
-          ))}
-        </div>
-        <div className='row view--photography__gallery__row'>
-          {_.map([
-            CAPITOL_REEF_SUNSET_ROCK,
-            CAPITOL_REEF_BURNT_ROCK
-          ], (image) => (
-            <div className='six columns view--photography__gallery__image-wrapper'>
-              <img className='view--photography__gallery__image' src={image[IMAGE_WIDTH_SMALL]} />
-            </div>
-          ))}
-        </div>
-        <div className='row view--photography__gallery__row'>
-          {_.map([
-            ARCHES_TREE_CAVE,
-            ARCHES_MONSTER_ARCH
-          ], (image) => (
-            <div className='six columns view--photography__gallery__image-wrapper'>
-              <img className='view--photography__gallery__image' src={image[IMAGE_WIDTH_SMALL]} />
-            </div>
-          ))}
-        </div>
-        <div className='row view--photography__gallery__row'>
-          {_.map([
-            ZION_LONG_ROAD,
-            ZION_RIVER
-          ], (image) => (
-            <div className='six columns view--photography__gallery__image-wrapper'>
-              <img className='view--photography__gallery__image' src={image[IMAGE_WIDTH_SMALL]} />
-            </div>
-          ))}
-        </div>
-        <div className='row view--photography__gallery__row'>
-          {_.map([
-            CANYONLANDS_FASHION_STATEMENT,
-            CANYONLANDS_HORIZON
-          ], (image) => (
-            <div className='six columns view--photography__gallery__image-wrapper'>
-              <img className='view--photography__gallery__image' src={image[IMAGE_WIDTH_SMALL]} />
-            </div>
-          ))}
-        </div>
+        {_.map(CA_TO_MI_ROAD_TRIP_2017, (image, index) => (
+          <div className='view--photography__gallery__image-wrapper' key={index}>
+            <img className='view--photography__gallery__image' src={image[IMAGE_WIDTH_SMALL]} />
+          </div>
+        ))}
       </div>
     )
   }

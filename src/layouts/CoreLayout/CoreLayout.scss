@@ -4,7 +4,7 @@
 
 $footer-height: 5;
 
-.container.core-layout__viewport {
+.core-layout__viewport {
   @include mobile-height {
     min-height: calc(100% - #{$footer-height}rem);
   }

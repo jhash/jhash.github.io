@@ -119,7 +119,7 @@ export class HomeView extends React.Component {
 
   render () {
     return (
-      <div className='view--home'>
+      <div className='view--home container text-center'>
         <div className='row'>
           <h2 className='view--home__header__name'>
             {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.name')}
