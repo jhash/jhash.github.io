@@ -43,7 +43,7 @@ $header-transparency: .05;
 }
 
 .route-row {
-  height: 3.8rem;
+  height: $header-height / 2;
   white-space: nowrap;
 }
 

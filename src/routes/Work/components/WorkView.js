@@ -12,7 +12,7 @@ import { ALL_WORK_SOFTWARE, WORK_VIEW_CONTENT } from 'content/views/Work/work'
 import WorkCell from 'components/WorkCell/WorkCell'
 
 export const WorkView = (props) => (
-  <div className='view--work container text-center'>
+  <div className='view--work container'>
     <div className='row'>
       <div className='view--work__tab twelve columns text-left'>
         <div className='view--work__tab__table'>
