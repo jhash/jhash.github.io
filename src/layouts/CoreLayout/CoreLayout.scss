@@ -7,6 +7,7 @@ $footer-height: 5;
 .core-layout__viewport {
   @include mobile-height {
     min-height: calc(100% - #{$footer-height}rem);
+    padding-bottom: 0;
   }
   padding-top: $header-height;
   padding-bottom: $footer-height + rem;
