@@ -10,9 +10,11 @@ import {
 } from 'constants/images/images'
 
 import { caToMiPreview } from '../CAtoMIView/CAtoMIView'
+import { eurotripPreview } from '../EurotripView/EurotripView'
 
 const subSectionPreviews = [
-  caToMiPreview
+  caToMiPreview,
+  eurotripPreview
 ]
 
 export class PhotographyView extends React.Component {

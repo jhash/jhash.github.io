@@ -1,6 +1,7 @@
 import PhotographyView from 'routes/Photography/components/PhotographyView/PhotographyView'
 
 import CAtoMIView from 'routes/Photography/components/CAtoMIView/CAtoMIView'
+import EurotripView from 'routes/Photography/components/EurotripView/EurotripView'
 
 // export default (store) => ({
 //   path: 'photography',
@@ -14,6 +15,10 @@ export const createRoutes = (store) => ({
     {
       path: 'CA-MI-17',
       component: CAtoMIView
+    },
+    {
+      path: 'Eurotrip-17',
+      component: EurotripView
     }
   ]
 })

@@ -49,6 +49,9 @@ export class Header extends React.Component {
               <Link to='/photography/CA-MI-17' className='route' activeClassName='route--active'>
                 CA to MI 17
               </Link>
+              <Link to='/photography/Eurotrip-17' className='route' activeClassName='route--active'>
+                Eurotrip 17
+              </Link>
             </div>
           : null}
         </div>
