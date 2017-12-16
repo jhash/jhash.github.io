@@ -174,7 +174,7 @@ const EUROTRIP_2017 = [
 export const eurotripPreview = {
   title: 'Eurotrip - Summer 2017',
   image: EUROTRIP_2017[0],
-  linkTo: '/photography/Eurotrip-17'
+  linkTo: '/photography/eurotrip-17'
 }
 
 export class EurotripView extends React.Component {

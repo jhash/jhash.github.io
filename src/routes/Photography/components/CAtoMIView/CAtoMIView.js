@@ -170,7 +170,7 @@ const CA_TO_MI_ROAD_TRIP_2017 = [
 export const caToMiPreview = {
   title: 'CA to MI Road Trip - Spring 2017',
   image: CA_TO_MI_ROAD_TRIP_2017[0],
-  linkTo: '/photography/CA-MI-17'
+  linkTo: '/photography/ca-mi-17'
 }
 
 export class CAtoMIView extends React.Component {
