@@ -239,7 +239,9 @@ export class HomeView extends React.Component {
                   {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherSendLabel')}
                 </button>
                 {this.state.messageValid === false && this.state.submitIntent
-                  ? <div className={'view--home__lets-work-together__error view--home__lets-work-together__error--tablet'}>
+                  ? <div
+                    className={'view--home__lets-work-together__error view--home__lets-work-together__error--tablet'}
+                  >
                     {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherMessageError')}
                   </div>
                 : null}

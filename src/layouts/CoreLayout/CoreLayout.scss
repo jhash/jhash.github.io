@@ -4,6 +4,9 @@
 
 $footer-height: 5;
 
+$footer-me-with-flowers-cut-out-height: 300px;
+$footer-me-with-flowers-cut-out-right: 50px;
+
 .core-layout__viewport {
   @include mobile-height {
     min-height: calc(100% - #{$footer-height}rem);
@@ -11,9 +14,16 @@ $footer-height: 5;
   }
   padding-top: $header-height;
   padding-bottom: $footer-height + rem;
+
+  &.core-layout__viewport--home {
+    @include mobile-height {
+      padding-bottom: calc(#{$footer-me-with-flowers-cut-out-height} + #{$footer-height}rem);
+    }
+  }
 }
 
 .footer {
+  position: relative;
   @include phablet-height {
     position: fixed;
     bottom: 0;
@@ -23,7 +33,7 @@ $footer-height: 5;
   width: 100%;
   z-index: 9999;
   text-align: left;
-  overflow: hidden;
+  // overflow: hidden;
   background-color: transparentize(white, $header-transparency);
   border-top: 1px solid lightgrey;
 }
@@ -59,4 +69,27 @@ $footer-height: 5;
   line-height: 2rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.footer__me-cut-out-image {
+  height: 100%;
+}
+
+.footer__me-cut-out-image-wrapper {
+  position: absolute;
+  top: -$footer-me-with-flowers-cut-out-height;
+  right: $footer-me-with-flowers-cut-out-right;
+  height: $footer-me-with-flowers-cut-out-height;
+
+  @include mobile-or-phablet {
+    display: none;
+  }
+
+  @media (min-height: #{$phablet-min-height}) and (max-height: #{$desktop-min-height - 1px}) {
+    display: none;
+  }
+
+  @include mobile-height {
+    display: block;
+  }
 }
