@@ -85,7 +85,7 @@ $footer-me-with-flowers-cut-out-right: 50px;
     display: none;
   }
 
-  @media (min-height: #{$phablet-min-height}) and (max-height: #{$desktop-min-height - 1px}) {
+  @media (min-height: #{$phablet-min-height}) and (max-height: #{$desktop-min-height - 1px}) and (max-width: 1500px) {
     display: none;
   }
 
