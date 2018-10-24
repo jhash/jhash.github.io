@@ -85,6 +85,7 @@
   "author": "Jake Hash <jhash147@gmail.com> (http://jakehash.com)",
   "license": "MIT",
   "dependencies": {
+    "@mdi/font": "^3.0.39",
     "axios": "^0.16.2",
     "babel-core": "^6.25.0",
     "babel-loader": "^6.4.1",
@@ -107,8 +108,7 @@
     "iso-639-1": "^1.3.0",
     "json-loader": "^0.5.7",
     "localforage": "^1.5.0",
-    "mdi": "^1.9.33",
-    "node-sass": "^3.13.1",
+    "node-sass": "^4.9.4",
     "normalize.css": "^4.1.1",
     "optimize-css-assets-webpack-plugin": "^3.1.1",
     "postcss-loader": "^0.13.0",

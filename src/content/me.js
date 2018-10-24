@@ -55,7 +55,7 @@ export const YOUTUBE_BASE_URL = 'https://www.youtube.com'
 export const YOUTUBE_PROFILE_ROUTE = 'channel'
 export const YOUTUBE_USERNAME = 'UCPd8YTCBqBJX0DFsh37xjQA'
 export const YOUTUBE_URL = `${YOUTUBE_BASE_URL}/${YOUTUBE_PROFILE_ROUTE}/${YOUTUBE_USERNAME}`
-export const YOUTUBE_ICON_CLASS = 'mdi mdi-youtube-play'
+export const YOUTUBE_ICON_CLASS = 'mdi mdi-youtube'
 
 export const SPOTIFY_TITLE = 'Spotify'
 export const SPOTIFY_BASE_URL = 'https://open.spotify.com'

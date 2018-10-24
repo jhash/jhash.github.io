@@ -213,7 +213,9 @@ export class HomeView extends React.Component {
                   onChange={this._onMessageChange}
                 />
                 {this.state.messageValid === false && this.state.submitIntent
-                  ? <div className='view--home__lets-work-together__error view--home__lets-work-together__error--mobile'>
+                  ? <div
+                    className='view--home__lets-work-together__error view--home__lets-work-together__error--mobile'
+                  >
                     {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherMessageError')}
                   </div>
                 : null}

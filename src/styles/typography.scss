@@ -1,5 +1,5 @@
-$mdi-font-path: "~mdi/fonts" !default;
-@import '~mdi/scss/materialdesignicons';
+$mdi-font-path: "~@mdi/font/fonts" !default;
+@import '~@mdi/font/scss/materialdesignicons';
 
 @function mdi($name) {
     @return char(map-get($mdi-icons, $name));
