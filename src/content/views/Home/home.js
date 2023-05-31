@@ -5,7 +5,7 @@ const HOME_VIEW_CONTENT = {
     name: DISPLAY_NAME,
     location: CURRENT_LOCATION,
     jobTitle: {
-      [DEFAULT_LANGUAGE_CODE]: 'Web and Mobile Developer / Designer, Software Engineer'
+      [DEFAULT_LANGUAGE_CODE]: 'Full-Stack Software Engineer'
     },
     currentWorkHeader: {
       [DEFAULT_LANGUAGE_CODE]: 'Currently working on:'

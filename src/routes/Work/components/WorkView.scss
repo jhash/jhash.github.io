@@ -1,4 +1,4 @@
-@import '~components/View/View.scss';
+@import "~components/View/View.scss";
 
 $view-work-tag-font-size: 1.2rem;
 $view-work-tag-line-height: 2.2rem;
@@ -23,7 +23,6 @@ $view-work-tag-line-height: 2.2rem;
 }
 
 .view--work__description {
-
 }
 
 .view--work__description__list {
@@ -50,9 +49,14 @@ $view-work-tag-line-height: 2.2rem;
   padding: 0 0.5rem;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
-  border: 1px dotted transparentize(black, 0.7);
+  border: 1px solid transparentize(black, 0.4);
+  border-radius: 4px;
   font-size: $view-work-tag-font-size;
   line-height: $view-work-tag-line-height;
+
+  &:hover {
+    background: transparentize(black, 0.98);
+  }
 }
 
 .view--work__tab__table__section-title {

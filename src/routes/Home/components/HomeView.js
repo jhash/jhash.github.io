@@ -6,8 +6,8 @@ import './HomeView.scss'
 
 import { resolveLocalizationGet } from 'helpers/localize'
 
-import LoadingSpinnerFlower from 'components/LoadingSpinnerFlower/LoadingSpinnerFlower'
-import EllipseDotAnimation from 'components/EllipseDotAnimation'
+// import LoadingSpinnerFlower from 'components/LoadingSpinnerFlower/LoadingSpinnerFlower'
+// import EllipseDotAnimation from 'components/EllipseDotAnimation'
 
 import HOME_VIEW_CONTENT from 'content/views/Home/home'
 import { CURRENT_WORK_SOFTWARE } from 'content/views/Work/work'
@@ -147,7 +147,7 @@ export class HomeView extends React.Component {
             })}
           </ul>
         </div>
-        {!this.state.messageSending && this.state.messageSentSuccessfully !== true
+        {/* {!this.state.messageSending && this.state.messageSentSuccessfully !== true
           ? <form onSubmit={this._sendMessage} ref='letsWorkTogetherForm'>
             <div className='row'>
               <div className='four columns font-size--5 view--home__lets-work-together__title'>
@@ -267,7 +267,7 @@ export class HomeView extends React.Component {
             <i className='view--home__message-sent__icon' />
             {resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.workTogetherMessageSent')}
           </h6>
-        : null}
+        : null} */}
       </div>
     )
   }

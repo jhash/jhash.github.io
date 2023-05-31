@@ -40,7 +40,7 @@ export const SOUNDCLOUD_ICON_CLASS = 'mdi mdi-soundcloud'
 
 export const INSTAGRAM_TITLE = 'Instagram'
 export const INSTAGRAM_BASE_URL = 'https://www.instagram.com'
-export const INSTAGRAM_USERNAME = 'jhash14'
+export const INSTAGRAM_USERNAME = 'jakehashtags'
 export const INSTAGRAM_URL = `${INSTAGRAM_BASE_URL}/${INSTAGRAM_USERNAME}`
 export const INSTAGRAM_ICON_CLASS = 'mdi mdi-instagram'
 
@@ -126,12 +126,12 @@ export const SOCIAL_LINKS = [
     title: SPOTIFY_TITLE,
     href: SPOTIFY_URL,
     iconClass: SPOTIFY_ICON_CLASS
-  },
-  {
-    title: SOUNDCLOUD_TITLE,
-    href: SOUNDCLOUD_URL,
-    iconClass: SOUNDCLOUD_ICON_CLASS
   }
+  // {
+  //   title: SOUNDCLOUD_TITLE,
+  //   href: SOUNDCLOUD_URL,
+  //   iconClass: SOUNDCLOUD_ICON_CLASS
+  // }
   // {
   //   title: STEAM_TITLE,
   //   href: STEAM_URL,

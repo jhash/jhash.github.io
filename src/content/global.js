@@ -32,5 +32,5 @@ export const DISPLAY_NAME = (languageCode) => {
 }
 
 export const CURRENT_LOCATION = {
-  [DEFAULT_LANGUAGE_CODE]: 'Ann Arbor, MI / Remote'
+  [DEFAULT_LANGUAGE_CODE]: 'Brooklyn, NY'
 }

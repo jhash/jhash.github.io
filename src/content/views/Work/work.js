@@ -42,13 +42,17 @@ export const CURRENT_WORK_SOFTWARE = [
         end: new Date('01/01/2016')
       }
     ]
-  },
+  }
+]
+
+export const ALL_WORK_SOFTWARE = CURRENT_WORK_SOFTWARE.concat([
   {
     title: 'Web Coordinator',
     projectNames: 'AAoM',
     company: 'Autism Alliance of Michigan',
     shortDescription: {
-      [DEFAULT_LANGUAGE_CODE]: 'A non-profit focused on providing resources for families struggling with autism'
+      [DEFAULT_LANGUAGE_CODE]: `A non-profit focused on providing resources for families and individuals
+        living with autism`
     },
     workDescription: {
       [DEFAULT_LANGUAGE_CODE]: [
@@ -71,13 +75,11 @@ export const CURRENT_WORK_SOFTWARE = [
     ],
     dates: [
       {
-        start: new Date('11/07/2017')
+        start: new Date('11/07/2017'),
+        end: new Date('03/01/2018')
       }
     ]
-  }
-]
-
-export const ALL_WORK_SOFTWARE = CURRENT_WORK_SOFTWARE.concat([
+  },
   {
     title: 'Web Developer/Designer (Contract)',
     projectNames: 'COSMOS, Luzero',
