@@ -3,7 +3,7 @@ $header-height: 7.2rem;
 $logo-h-height: $header-height;
 $logo-h-width: 9rem;
 
-$header-transparency: .05;
+$header-transparency: 0.05;
 
 .header {
   position: fixed;
@@ -41,6 +41,10 @@ $header-transparency: .05;
   &:focus {
     color: black;
   }
+
+  &.route--subroute {
+    font-weight: 400;
+  }
 }
 
 .route-row {
@@ -50,6 +54,10 @@ $header-transparency: .05;
 
 .route--active {
   font-weight: bold;
+
+  &.route--subroute {
+    font-weight: 900;
+  }
 }
 
 .logo-h {
@@ -58,7 +66,7 @@ $header-transparency: .05;
   line-height: 7.2rem;
   padding: 1rem;
   text-align: center;
-  font-family: 'Lovers Quarrel', cursive;
+  font-family: "Lovers Quarrel", cursive;
   font-size: 7.2rem;
   text-decoration: none;
 }

@@ -52,9 +52,11 @@ export const VIMEO_ICON_CLASS = 'mdi mdi-vimeo'
 
 export const YOUTUBE_TITLE = 'Youtube'
 export const YOUTUBE_BASE_URL = 'https://www.youtube.com'
-export const YOUTUBE_PROFILE_ROUTE = 'channel'
-export const YOUTUBE_USERNAME = 'UCPd8YTCBqBJX0DFsh37xjQA'
-export const YOUTUBE_URL = `${YOUTUBE_BASE_URL}/${YOUTUBE_PROFILE_ROUTE}/${YOUTUBE_USERNAME}`
+// export const YOUTUBE_PROFILE_ROUTE = 'channel'
+// export const YOUTUBE_USERNAME = 'UCPd8YTCBqBJX0DFsh37xjQA'
+export const YOUTUBE_USERNAME = 'jakehashtags'
+// export const YOUTUBE_URL = `${YOUTUBE_BASE_URL}/${YOUTUBE_PROFILE_ROUTE}/${YOUTUBE_USERNAME}`
+export const YOUTUBE_URL = `${YOUTUBE_BASE_URL}/@${YOUTUBE_USERNAME}`
 export const YOUTUBE_ICON_CLASS = 'mdi mdi-youtube'
 
 export const SPOTIFY_TITLE = 'Spotify'

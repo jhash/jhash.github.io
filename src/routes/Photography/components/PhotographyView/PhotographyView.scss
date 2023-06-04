@@ -1,4 +1,4 @@
-@import 'media';
+@import "media";
 
 $photography-image-padding: 15px;
 $photography-image-padding-tablet: 10px;
@@ -42,7 +42,7 @@ $photography-image-padding-mobile: 7px;
   }
 
   @include hd {
-    width: calc(100%/3);
+    width: calc(100% / 3);
     padding: $photography-image-padding;
     padding-bottom: 0;
   }
@@ -55,5 +55,21 @@ $photography-image-padding-mobile: 7px;
 .view--photography__gallery__image-title {
   width: 100%;
   text-align: center;
-  color: black;
+  color: transparentize(black, 0.2);
+  font-weight: 600;
+  border: 1px solid transparentize(black, 0.9);
+  border-top: 0;
+  padding: 0.5rem 0;
+}
+
+.view--photography__gallery__image-wrapper__link {
+  display: flex;
+  flex-direction: column;
+
+  &:hover,
+  &:active {
+    .view--photography__gallery__image-title {
+      background: transparentize(black, 0.98);
+    }
+  }
 }

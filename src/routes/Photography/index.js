@@ -13,11 +13,11 @@ export const createRoutes = (store) => ({
   component   : PhotographyView,
   childRoutes : [
     {
-      path: 'ca-mi-17',
+      path: 'utah-colorado',
       component: CAtoMIView
     },
     {
-      path: 'eurotrip-17',
+      path: 'europe',
       component: EurotripView
     }
   ]

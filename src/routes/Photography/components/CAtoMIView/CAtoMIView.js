@@ -150,7 +150,7 @@ const ZION_SUNSET_OVER_CLIFF = {
 //   [IMAGE_WIDTH_LARGE]: HORSESHOE_BEND_2048
 // }
 
-const CA_TO_MI_ROAD_TRIP_2017 = [
+const UTAH_COLORADO = [
   ANGELS_LANDING_RAILING,
   // ARCHES_CANYON_SIDE_DIAGONAL,
   ARCHES_DOUBLE_ARCH,
@@ -167,10 +167,10 @@ const CA_TO_MI_ROAD_TRIP_2017 = [
   COLORADO_HIGHWAY_STOP_LAKE
 ]
 
-export const caToMiPreview = {
-  title: 'CA to MI Road Trip - Spring 2017',
-  image: CA_TO_MI_ROAD_TRIP_2017[0],
-  linkTo: '/photography/ca-mi-17'
+export const utahColoradoPreview = {
+  title: 'Utah and Colorado',
+  image: UTAH_COLORADO[0],
+  linkTo: '/photography/utah-colorado'
 }
 
 export class CAtoMIView extends React.Component {
@@ -178,7 +178,7 @@ export class CAtoMIView extends React.Component {
   render () {
     return (
       <div className='view--photography'>
-        {_.map(CA_TO_MI_ROAD_TRIP_2017, (image, index) => (
+        {_.map(UTAH_COLORADO, (image, index) => (
           <div className='view--photography__gallery__image-wrapper' key={index}>
             <img className='view--photography__gallery__image' src={image[IMAGE_WIDTH_SMALL]} />
           </div>

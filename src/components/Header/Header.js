@@ -46,11 +46,11 @@ export class Header extends React.Component {
           </div>
           {this.context.router.isActive('photography')
             ? <div className='route-row'>
-              <Link to='/photography/ca-mi-17' className='route' activeClassName='route--active'>
-                CA to MI 17
+              <Link to='/photography/utah-colorado' className='route route--subroute' activeClassName='route--active'>
+                Utah and Colorado
               </Link>
-              <Link to='/photography/eurotrip-17' className='route' activeClassName='route--active'>
-                Eurotrip 17
+              <Link to='/photography/europe' className='route route--subroute' activeClassName='route--active'>
+                Europe
               </Link>
             </div>
           : null}

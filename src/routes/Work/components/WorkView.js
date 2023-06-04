@@ -31,14 +31,14 @@ export const WorkView = (props) => (
                     <span key={`view-work-date-${index}`}>
                       {date.start
                         ? <span>
-                          {date.start.toLocaleDateString()}
+                          {date.start.toLocaleDateString(undefined, { year: 'numeric', month: 'long' })}
                           {!date.end ? '+' : null}
                         </span>
                       : null}
                       {date.end
                         ? <span>
                           {date.start ? ' - ' : null}
-                          {date.end.toLocaleDateString()}
+                          {date.end.toLocaleDateString(undefined, { year: 'numeric', month: 'long' })}
                         </span>
                       : null}
                       {workContent.dates.length > 1 && index === 0

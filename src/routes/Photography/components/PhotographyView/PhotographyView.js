@@ -9,11 +9,11 @@ import {
   IMAGE_WIDTH_SMALL
 } from 'constants/images/images'
 
-import { caToMiPreview } from '../CAtoMIView/CAtoMIView'
+import { utahColoradoPreview } from '../CAtoMIView/CAtoMIView'
 import { eurotripPreview } from '../EurotripView/EurotripView'
 
 const subSectionPreviews = [
-  caToMiPreview,
+  utahColoradoPreview,
   eurotripPreview
 ]
 
@@ -28,7 +28,7 @@ export class PhotographyView extends React.Component {
       <div className='view--photography'>
         {_.map(subSectionPreviews, (preview, index) => (
           <div className='view--photography__gallery__image-wrapper' key={index}>
-            <Link to={preview.linkTo}>
+            <Link to={preview.linkTo} className='view--photography__gallery__image-wrapper__link'>
               <img className='view--photography__gallery__image' src={preview.image[IMAGE_WIDTH_SMALL]} />
               <div className='view--photography__gallery__image-title'>{preview.title}</div>
             </Link>
