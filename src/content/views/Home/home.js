@@ -8,7 +8,10 @@ const HOME_VIEW_CONTENT = {
       [DEFAULT_LANGUAGE_CODE]: 'Full-Stack Software Engineer'
     },
     currentWorkHeader: {
-      [DEFAULT_LANGUAGE_CODE]: 'Currently working on:'
+      [DEFAULT_LANGUAGE_CODE]: 'Currently looking for work in NYC'
+    },
+    getInTouchHeader: {
+      [DEFAULT_LANGUAGE_CODE]: 'Get in touch'
     },
     workTogetherQuestion: {
       [DEFAULT_LANGUAGE_CODE]: 'Interested in working together?'

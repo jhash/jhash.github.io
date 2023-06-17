@@ -1,7 +1,7 @@
 import _ from 'lodash'
 
 import React from 'react'
-import { Link } from 'react-router'
+// import { Link } from 'react-router'
 import './HomeView.scss'
 
 import { resolveLocalizationGet } from 'helpers/localize'
@@ -10,7 +10,7 @@ import { resolveLocalizationGet } from 'helpers/localize'
 // import EllipseDotAnimation from 'components/EllipseDotAnimation'
 
 import HOME_VIEW_CONTENT from 'content/views/Home/home'
-import { CURRENT_WORK_SOFTWARE } from 'content/views/Work/work'
+// import { CURRENT_WORK_SOFTWARE } from 'content/views/Work/work'
 
 export class HomeView extends React.Component {
   static propTypes = {
@@ -132,7 +132,8 @@ export class HomeView extends React.Component {
         <h4 className='row'>{resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.jobTitle')}</h4>
         <div className='row'>
           <h5>{resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.currentWorkHeader')}</h5>
-          <ul className='view--home__current_work'>
+          {/* <h5>{resolveLocalizationGet(HOME_VIEW_CONTENT, 'header.getInTouchHeader')}</h5> */}
+          {/* <ul className='view--home__current_work'>
             {_.map(CURRENT_WORK_SOFTWARE, (workContent, index) => {
               const textContent = <li className='view--home__current_work__li__text'>
                 {[
@@ -145,7 +146,10 @@ export class HomeView extends React.Component {
                 ? <Link key={`current-work-${index}`} to={_.get(workContent, 'link')}>{textContent}</Link>
                 : <a key={`current-work-${index}`} href={_.get(workContent, 'href')} target='_blank'>{textContent}</a>
             })}
-          </ul>
+          </ul> */}
+        </div>
+        <div className='row'>
+          <iframe className='view--home__get-in-touch' src='https://notionforms.io/forms/get-in-touch-rdgmf6' />
         </div>
         {/* {!this.state.messageSending && this.state.messageSentSuccessfully !== true
           ? <form onSubmit={this._sendMessage} ref='letsWorkTogetherForm'>
