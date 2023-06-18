@@ -32,7 +32,7 @@ export const WorkView = (props) => (
                       {date.start
                         ? <span>
                           {date.start.toLocaleDateString(undefined, { year: 'numeric', month: 'long' })}
-                          {!date.end ? '+' : null}
+                          {!date.end ? ' to present' : null}
                         </span>
                       : null}
                       {date.end
